@@ -29,27 +29,81 @@
     </mxGraphModel>
   </diagram>
   <diagram id="pqbc91mAlIcmljudpYJ5" name="Игрок и Связи с ним">
-    <mxGraphModel dx="568" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1420" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="K2XrHp8rcPxL4InWE_2a-1" value="Player" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="610" y="360" width="380" height="590" as="geometry" />
         </mxCell>
-        <mxCell id="K2XrHp8rcPxL4InWE_2a-3" value="+ updateSkills(type: string, arr[]: vector&amp;lt;int&amp;gt;): void&lt;div&gt;+ update&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="K2XrHp8rcPxL4InWE_2a-1">
+        <mxCell id="K2XrHp8rcPxL4InWE_2a-3" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="K2XrHp8rcPxL4InWE_2a-1">
           <mxGeometry y="370" width="380" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="K2XrHp8rcPxL4InWE_2a-2" value="- health: Health&lt;div&gt;- skills: Skills&lt;/div&gt;&lt;div&gt;- inv: Inventory&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- speed:&amp;nbsp;int_fast8_t&lt;/div&gt;&lt;div&gt;- hp:&amp;nbsp;int_fast8_t&lt;/div&gt;&lt;div&gt;- stels:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- deduction:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- mind:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- power: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- armor:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- light: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- fire: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- perchatka:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="K2XrHp8rcPxL4InWE_2a-1">
+        <mxCell id="K2XrHp8rcPxL4InWE_2a-2" value="- health: Health&lt;div&gt;- skills: Skills&lt;/div&gt;&lt;div&gt;- inv: Inventory&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="K2XrHp8rcPxL4InWE_2a-1">
           <mxGeometry y="20" width="380" height="350" as="geometry" />
         </mxCell>
-        <mxCell id="z3sM04E19Wtb6njGu5sy-2" value="Monster" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1360" y="10" width="280" height="370" as="geometry" />
+        <mxCell id="z3sM04E19Wtb6njGu5sy-2" value="Inventory" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="140" width="360" height="370" as="geometry" />
         </mxCell>
-        <mxCell id="z3sM04E19Wtb6njGu5sy-3" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="z3sM04E19Wtb6njGu5sy-2">
-          <mxGeometry y="200" width="280" height="170" as="geometry" />
+        <mxCell id="z3sM04E19Wtb6njGu5sy-3" value="+addItem(item:Item): void&lt;div&gt;+deleteItem(item:Item): bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="z3sM04E19Wtb6njGu5sy-2">
+          <mxGeometry y="200" width="360" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="z3sM04E19Wtb6njGu5sy-4" value="-hp:&amp;nbsp;int8_t&lt;div&gt;-armor:&amp;nbsp;int_fast8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="z3sM04E19Wtb6njGu5sy-2">
-          <mxGeometry y="20" width="280" height="180" as="geometry" />
+        <mxCell id="z3sM04E19Wtb6njGu5sy-4" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- armor:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;enum [ rad:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t, phys:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- light: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- fire: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- perchatka: enum [ sk1: bool, sk2: bool, sk3: bool, sk4: bool ]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- inventory_size: int&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;- listOfItems: arr [Item] * inventory_size&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- listOfFast: arr [Item] * 4&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="z3sM04E19Wtb6njGu5sy-2">
+          <mxGeometry y="20" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-1" value="Skills" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="670" width="280" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-3" value="&lt;div&gt;- speed:&amp;nbsp;int_fast8_t&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- stels:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- deduction:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- mind:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- power: int_fast8_t&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="O2UAJy6HJNhmIMR7Ghev-1">
+          <mxGeometry y="20" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-2" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="110" y="850" width="280" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.006;entryY=0.825;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=diamondThin;endFill=1;endSize=20;" edge="1" parent="1" source="O2UAJy6HJNhmIMR7Ghev-3" target="K2XrHp8rcPxL4InWE_2a-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.343;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=diamondThin;endFill=1;endSize=20;" edge="1" parent="1" source="z3sM04E19Wtb6njGu5sy-4" target="K2XrHp8rcPxL4InWE_2a-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=diamondThin;endFill=1;endSize=20;" edge="1" parent="1" source="O2UAJy6HJNhmIMR7Ghev-6" target="z3sM04E19Wtb6njGu5sy-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-6" value="Item" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="610" width="360" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-7" value="+ Use(): void&lt;div&gt;+&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="O2UAJy6HJNhmIMR7Ghev-6">
+          <mxGeometry y="200" width="360" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-8" value="+ name: string&lt;div&gt;+ type: enum[ weapon, armor, cons, base&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="O2UAJy6HJNhmIMR7Ghev-6">
+          <mxGeometry y="20" width="360" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-10" value="0..." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="580" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-11" value="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="220" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-12" value="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="740" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-13" value="Игрок и связанные с ним классы" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=48;" vertex="1" parent="1">
+          <mxGeometry x="90" y="60" width="610" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-14" value="Health" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="260" width="300" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-15" value="- head: int8_t&lt;div&gt;- body: int8_t&lt;/div&gt;&lt;div&gt;- lhand: int8_t&lt;/div&gt;&lt;div&gt;- rhand: int8_t&lt;/div&gt;&lt;div&gt;- lfoot: int8_t&lt;/div&gt;&lt;div&gt;- rfoot: int8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="O2UAJy6HJNhmIMR7Ghev-14">
+          <mxGeometry y="20" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-16" value="- takeDamage(ammount: int, body_part: string): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="100" y="440" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.001;entryY=0.313;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=diamondThin;endFill=1;endSize=20;" edge="1" parent="1" source="O2UAJy6HJNhmIMR7Ghev-15" target="K2XrHp8rcPxL4InWE_2a-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-18" value="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="330" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
