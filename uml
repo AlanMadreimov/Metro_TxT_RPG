@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 YaBrowser/25.2.0.0 Safari/537.36" version="26.2.14">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 YaBrowser/25.2.0.0 Safari/537.36" version="26.2.14" pages="2">
   <diagram name="Боевая система" id="929967ad-93f9-6ef4-fab6-5d389245f69c">
-    <mxGraphModel dx="1420" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+    <mxGraphModel dx="686" dy="378" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" style=";html=1;" />
         <mxCell id="1" style=";html=1;" parent="0" />
@@ -19,11 +19,37 @@
         <mxCell id="rOCa7gmg3Pl7sGvrYfp7-9" value="Player" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="170" y="310" width="240" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="rOCa7gmg3Pl7sGvrYfp7-11" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rOCa7gmg3Pl7sGvrYfp7-9">
+        <mxCell id="rOCa7gmg3Pl7sGvrYfp7-11" value="-hp: int" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="rOCa7gmg3Pl7sGvrYfp7-9">
           <mxGeometry y="20" width="240" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="rOCa7gmg3Pl7sGvrYfp7-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="rOCa7gmg3Pl7sGvrYfp7-9">
+        <mxCell id="rOCa7gmg3Pl7sGvrYfp7-12" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="rOCa7gmg3Pl7sGvrYfp7-9">
           <mxGeometry y="130" width="240" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="pqbc91mAlIcmljudpYJ5" name="Игрок и Связи с ним">
+    <mxGraphModel dx="568" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="K2XrHp8rcPxL4InWE_2a-1" value="Player" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="360" width="380" height="590" as="geometry" />
+        </mxCell>
+        <mxCell id="K2XrHp8rcPxL4InWE_2a-3" value="+ updateSkills(type: string, arr[]: vector&amp;lt;int&amp;gt;): void&lt;div&gt;+ update&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="K2XrHp8rcPxL4InWE_2a-1">
+          <mxGeometry y="370" width="380" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="K2XrHp8rcPxL4InWE_2a-2" value="- health: Health&lt;div&gt;- skills: Skills&lt;/div&gt;&lt;div&gt;- inv: Inventory&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- speed:&amp;nbsp;int_fast8_t&lt;/div&gt;&lt;div&gt;- hp:&amp;nbsp;int_fast8_t&lt;/div&gt;&lt;div&gt;- stels:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- deduction:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- mind:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- power: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- armor:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- light: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- fire: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- perchatka:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="K2XrHp8rcPxL4InWE_2a-1">
+          <mxGeometry y="20" width="380" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="z3sM04E19Wtb6njGu5sy-2" value="Monster" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="10" width="280" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="z3sM04E19Wtb6njGu5sy-3" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="z3sM04E19Wtb6njGu5sy-2">
+          <mxGeometry y="200" width="280" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="z3sM04E19Wtb6njGu5sy-4" value="-hp:&amp;nbsp;int8_t&lt;div&gt;-armor:&amp;nbsp;int_fast8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="z3sM04E19Wtb6njGu5sy-2">
+          <mxGeometry y="20" width="280" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
