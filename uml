@@ -29,95 +29,147 @@
     </mxGraphModel>
   </diagram>
   <diagram id="pqbc91mAlIcmljudpYJ5" name="Игрок и Связи с ним">
-    <mxGraphModel dx="1529" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1169" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="K2XrHp8rcPxL4InWE_2a-1" value="Player" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="K2XrHp8rcPxL4InWE_2a-1" value="Player" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="610" y="360" width="380" height="590" as="geometry" />
         </mxCell>
-        <mxCell id="K2XrHp8rcPxL4InWE_2a-3" value="&lt;div&gt;+ takeDamage ( body_part: string, damage:&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;arr [ rad:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t, phys:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t], wound: Wound&amp;nbsp;&lt;/span&gt;): void&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="K2XrHp8rcPxL4InWE_2a-1">
+        <mxCell id="K2XrHp8rcPxL4InWE_2a-3" value="&lt;div&gt;+ takeDamage ( body_part: string, damage:&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;arr [ rad:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t, phys:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t], wound: Wound&amp;nbsp;&lt;/span&gt;): void&lt;/div&gt;&lt;div&gt;+ attack(type: enum [melle, fire] ): arr [ time:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int8_t&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, damage:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int8_t&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, effect: arr [destroyWeapon: bool, slowDown: int8_t, stun: int8_t&amp;nbsp; ]]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ skill(type: enum[sk1, sk2, sk3, sk4]):&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="K2XrHp8rcPxL4InWE_2a-1" vertex="1">
           <mxGeometry y="370" width="380" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="K2XrHp8rcPxL4InWE_2a-2" value="- health: Health&lt;div&gt;- skills: Skills&lt;/div&gt;&lt;div&gt;- inv: Inventory&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="K2XrHp8rcPxL4InWE_2a-1">
+        <mxCell id="K2XrHp8rcPxL4InWE_2a-2" value="- health: Health&lt;div&gt;- skills: Skills&lt;/div&gt;&lt;div&gt;- inv: Inventory&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-tired: int8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="K2XrHp8rcPxL4InWE_2a-1" vertex="1">
           <mxGeometry y="20" width="380" height="350" as="geometry" />
         </mxCell>
-        <mxCell id="z3sM04E19Wtb6njGu5sy-2" value="Inventory" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="z3sM04E19Wtb6njGu5sy-2" value="Inventory" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1210" y="140" width="360" height="370" as="geometry" />
         </mxCell>
-        <mxCell id="z3sM04E19Wtb6njGu5sy-3" value="+addItem(item:Item): void&lt;div&gt;+deleteItem(item:Item): bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="z3sM04E19Wtb6njGu5sy-2">
+        <mxCell id="z3sM04E19Wtb6njGu5sy-3" value="+addItem(item:Item): void&lt;div&gt;+deleteItem(item:Item): bool&lt;/div&gt;&lt;div&gt;+updateSkills(): arr [ armor, light, fire, perchatka ]&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="z3sM04E19Wtb6njGu5sy-2" vertex="1">
           <mxGeometry y="200" width="360" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="z3sM04E19Wtb6njGu5sy-4" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- armor:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;arr [ rad:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t, phys:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- light: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- fire: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- perchatka: enum [ sk1: bool, sk2: bool, sk3: bool, sk4: bool ]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- inventory_size: int&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;- listOfItems: arr [Item] * inventory_size&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- listOfFast: arr [Item] * 4&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="z3sM04E19Wtb6njGu5sy-2">
+        <mxCell id="z3sM04E19Wtb6njGu5sy-4" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- armor:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;arr [ rad:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t, phys:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- light: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- fire: int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- perchatka: arr [ sk1: bool, sk2: bool, sk3: bool, sk4: bool ]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- inventory_size: int&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;- listOfItems: arr [Item] * inventory_size&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- listOfFast: arr [Item] * 3&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="z3sM04E19Wtb6njGu5sy-2" vertex="1">
           <mxGeometry y="20" width="360" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="O2UAJy6HJNhmIMR7Ghev-1" value="Skills" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-1" value="Skills" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="110" y="670" width="280" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="O2UAJy6HJNhmIMR7Ghev-3" value="&lt;div&gt;- speed:&amp;nbsp;int_fast8_t&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- stels:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- deduction:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- mind:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- power: int_fast8_t&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="O2UAJy6HJNhmIMR7Ghev-1">
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-3" value="&lt;div&gt;- speed:&amp;nbsp;int_fast8_t&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- stels:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- deduction:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- mind:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- power: int_fast8_t&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="O2UAJy6HJNhmIMR7Ghev-1" vertex="1">
           <mxGeometry y="20" width="280" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="O2UAJy6HJNhmIMR7Ghev-2" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-2" value="+updateSkills(): arr[ speed, stels, deduction, mind, power]&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="110" y="850" width="280" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="O2UAJy6HJNhmIMR7Ghev-6" value="Item" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1210" y="610" width="360" height="370" as="geometry" />
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-6" value="Item" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1480" y="590" width="260" height="260" as="geometry" />
         </mxCell>
-        <mxCell id="O2UAJy6HJNhmIMR7Ghev-7" value="+ Use(): void&lt;div&gt;+&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="O2UAJy6HJNhmIMR7Ghev-6">
-          <mxGeometry y="200" width="360" height="170" as="geometry" />
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-7" value="+ Use(): void&lt;div&gt;+ showMenu(): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="O2UAJy6HJNhmIMR7Ghev-6" vertex="1">
+          <mxGeometry y="130" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="O2UAJy6HJNhmIMR7Ghev-8" value="+ name: string&lt;div&gt;+ type: enum[ weapon, armor, cons, base&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="O2UAJy6HJNhmIMR7Ghev-6">
-          <mxGeometry y="20" width="360" height="180" as="geometry" />
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-8" value="+ name: string&lt;div&gt;+ type: enum[ weapon, armor, cons, base&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="O2UAJy6HJNhmIMR7Ghev-6" vertex="1">
+          <mxGeometry y="20" width="260" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="O2UAJy6HJNhmIMR7Ghev-13" value="Игрок и связанные с ним классы" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=48;" vertex="1" parent="1">
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-13" value="Игрок и связанные с ним классы" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=48;" parent="1" vertex="1">
           <mxGeometry x="90" y="60" width="610" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="O2UAJy6HJNhmIMR7Ghev-14" value="Health" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-14" value="Health" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="100" y="260" width="300" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="O2UAJy6HJNhmIMR7Ghev-15" value="- head: int8_t&lt;div&gt;- body: int8_t&lt;/div&gt;&lt;div&gt;- lhand: int8_t&lt;/div&gt;&lt;div&gt;- rhand: int8_t&lt;/div&gt;&lt;div&gt;- lfoot: int8_t&lt;/div&gt;&lt;div&gt;- rfoot: int8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="O2UAJy6HJNhmIMR7Ghev-14">
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-15" value="- head: int8_t&lt;div&gt;- body: int8_t&lt;/div&gt;&lt;div&gt;- lhand: int8_t&lt;/div&gt;&lt;div&gt;- rhand: int8_t&lt;/div&gt;&lt;div&gt;- lfoot: int8_t&lt;/div&gt;&lt;div&gt;- rfoot: int8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="O2UAJy6HJNhmIMR7Ghev-14" vertex="1">
           <mxGeometry y="20" width="300" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="O2UAJy6HJNhmIMR7Ghev-16" value="&lt;div&gt;+ takeDamage ( body_part: string, damage:&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;arr [ rad:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t, phys:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t], wound: Wound&amp;nbsp;&lt;/span&gt;): void&lt;div&gt;- death (): void&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="O2UAJy6HJNhmIMR7Ghev-16" value="&lt;div&gt;+ takeDamage ( body_part: string, damage:&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;arr [ rad:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t, phys:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t], wound: Wound&amp;nbsp;&lt;/span&gt;): void&lt;div&gt;- death (): void&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="100" y="440" width="300" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="2aNArI0BQHGTmsO4QB2B-1" value="" style="endArrow=diamondThin;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.003;entryY=0.315;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;endFill=1;endSize=20;" edge="1" parent="1" source="O2UAJy6HJNhmIMR7Ghev-15" target="K2XrHp8rcPxL4InWE_2a-2">
+        <mxCell id="2aNArI0BQHGTmsO4QB2B-1" value="" style="endArrow=diamondThin;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.003;entryY=0.315;entryDx=0;entryDy=0;entryPerimeter=0;edgeStyle=orthogonalEdgeStyle;endFill=1;endSize=20;" parent="1" source="O2UAJy6HJNhmIMR7Ghev-15" target="K2XrHp8rcPxL4InWE_2a-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="430" y="520" as="sourcePoint" />
             <mxPoint x="530" y="520" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2aNArI0BQHGTmsO4QB2B-2" value="1" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="2aNArI0BQHGTmsO4QB2B-1">
+        <mxCell id="2aNArI0BQHGTmsO4QB2B-2" value="1" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="2aNArI0BQHGTmsO4QB2B-1" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2aNArI0BQHGTmsO4QB2B-3" value="" style="endArrow=diamondThin;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;endFill=1;endSize=20;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="O2UAJy6HJNhmIMR7Ghev-3" target="K2XrHp8rcPxL4InWE_2a-2">
+        <mxCell id="2aNArI0BQHGTmsO4QB2B-3" value="" style="endArrow=diamondThin;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;endFill=1;endSize=20;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="O2UAJy6HJNhmIMR7Ghev-3" target="K2XrHp8rcPxL4InWE_2a-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="410" y="650" as="sourcePoint" />
             <mxPoint x="621" y="780" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2aNArI0BQHGTmsO4QB2B-4" value="1" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="2aNArI0BQHGTmsO4QB2B-3">
+        <mxCell id="2aNArI0BQHGTmsO4QB2B-4" value="1" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="2aNArI0BQHGTmsO4QB2B-3" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2aNArI0BQHGTmsO4QB2B-5" value="" style="endArrow=diamondThin;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;endFill=1;endSize=20;exitX=0.518;exitY=0.008;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="O2UAJy6HJNhmIMR7Ghev-6" target="z3sM04E19Wtb6njGu5sy-3">
+        <mxCell id="2aNArI0BQHGTmsO4QB2B-5" value="" style="endArrow=diamondThin;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;endFill=1;endSize=20;exitX=0.518;exitY=0.008;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="O2UAJy6HJNhmIMR7Ghev-6" target="z3sM04E19Wtb6njGu5sy-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1450" y="570" as="sourcePoint" />
             <mxPoint x="1270" y="497" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1390" y="613" />
+              <mxPoint x="1615" y="560" />
+              <mxPoint x="1390" y="560" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2aNArI0BQHGTmsO4QB2B-6" value="0..." style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="2aNArI0BQHGTmsO4QB2B-5">
+        <mxCell id="2aNArI0BQHGTmsO4QB2B-6" value="0..." style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="2aNArI0BQHGTmsO4QB2B-5" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2aNArI0BQHGTmsO4QB2B-7" value="" style="endArrow=diamondThin;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;endFill=1;endSize=20;" edge="1" parent="1" source="z3sM04E19Wtb6njGu5sy-4" target="K2XrHp8rcPxL4InWE_2a-2">
+        <mxCell id="2aNArI0BQHGTmsO4QB2B-7" value="" style="endArrow=diamondThin;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;endFill=1;endSize=20;" parent="1" source="z3sM04E19Wtb6njGu5sy-4" target="K2XrHp8rcPxL4InWE_2a-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="950" y="320" as="sourcePoint" />
             <mxPoint x="1161" y="450" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2aNArI0BQHGTmsO4QB2B-8" value="1" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="2aNArI0BQHGTmsO4QB2B-7">
+        <mxCell id="2aNArI0BQHGTmsO4QB2B-8" value="1" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="2aNArI0BQHGTmsO4QB2B-7" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=blockThin;endFill=0;endSize=20;" edge="1" parent="1" source="Zz8gxZec43Ak84KQyvbq-1" target="O2UAJy6HJNhmIMR7Ghev-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-1" value="Weapon" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="930" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-2" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-1">
+          <mxGeometry y="130" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-3" value="+ melleDamage: int_fast8_t&lt;div&gt;+ fireDamage: int_fast8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-1">
+          <mxGeometry y="20" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-4" value="Armor" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="930" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-5" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-4">
+          <mxGeometry y="130" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-6" value="&lt;div&gt;+ radArmor:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ physArmor:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ typeArmor: enum[ head, body, hands, legs]&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-4">
+          <mxGeometry y="20" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;endArrow=blockThin;endFill=0;endSize=20;" edge="1" parent="1" source="Zz8gxZec43Ak84KQyvbq-7" target="O2UAJy6HJNhmIMR7Ghev-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-7" value="Cons" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1654" y="930" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-8" value="+ effectOfUse(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-7">
+          <mxGeometry y="130" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-9" value="- heal: int8_t&lt;br&gt;- healWounds: arr [Wound] * n&lt;div&gt;- tiredDown: int8_t&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-7">
+          <mxGeometry y="20" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=blockThin;endFill=0;endSize=20;" edge="1" parent="1" source="Zz8gxZec43Ak84KQyvbq-10" target="O2UAJy6HJNhmIMR7Ghev-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2060" y="885.0000000000002" as="sourcePoint" />
+            <mxPoint x="1850" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-10" value="Base" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1950" y="930" width="260" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-11" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-10">
+          <mxGeometry y="130" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-12" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-10">
+          <mxGeometry y="20" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.164;entryY=1.026;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=blockThin;endFill=0;endSize=20;" edge="1" parent="1" source="Zz8gxZec43Ak84KQyvbq-4" target="O2UAJy6HJNhmIMR7Ghev-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
