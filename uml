@@ -29,7 +29,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="pqbc91mAlIcmljudpYJ5" name="Игрок и Связи с ним">
-    <mxGraphModel dx="2840" dy="1566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2485" dy="1370" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -172,12 +172,12 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vNIWAAsK77wDa6MJHVwv-3" value="Game" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="1284" y="50" width="370" height="240" as="geometry" />
+          <mxGeometry x="1284" y="40" width="370" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="vNIWAAsK77wDa6MJHVwv-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="vNIWAAsK77wDa6MJHVwv-3" vertex="1">
-          <mxGeometry y="130" width="370" height="110" as="geometry" />
+        <mxCell id="vNIWAAsK77wDa6MJHVwv-6" value="+ main(): void&lt;div&gt;+ Station(name:string): void&lt;/div&gt;&lt;div&gt;+ Tropa(level: int_fast8_t): void&lt;/div&gt;&lt;div&gt;+ Fight(): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="vNIWAAsK77wDa6MJHVwv-3" vertex="1">
+          <mxGeometry y="130" width="370" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="vNIWAAsK77wDa6MJHVwv-7" value="&lt;div&gt;+ start()&lt;/div&gt;&lt;div&gt;+ processCommand(input: string): void&lt;/div&gt;&lt;div&gt;+ isGameOver(): bool&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="vNIWAAsK77wDa6MJHVwv-3" vertex="1">
+        <mxCell id="vNIWAAsK77wDa6MJHVwv-7" value="&lt;div&gt;+ start()&lt;/div&gt;&lt;div&gt;+ processCommand(input: string): void&lt;/div&gt;&lt;div&gt;+ isGameOver(): bool&lt;/div&gt;&lt;div&gt;+ main(): Main&lt;div&gt;+ Station(name:string): Station&lt;/div&gt;&lt;div&gt;+ Tropa(level: int_fast8_t): Tropa&lt;/div&gt;&lt;div&gt;+ Fight(): Fight&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="vNIWAAsK77wDa6MJHVwv-3" vertex="1">
           <mxGeometry y="20" width="370" height="110" as="geometry" />
         </mxCell>
       </root>
