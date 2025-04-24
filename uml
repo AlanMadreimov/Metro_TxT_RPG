@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 YaBrowser/25.2.0.0 Safari/537.36" version="26.2.14" pages="2">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.14" pages="2">
   <diagram name="Боевая система" id="929967ad-93f9-6ef4-fab6-5d389245f69c">
     <mxGraphModel dx="686" dy="378" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -29,7 +29,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="pqbc91mAlIcmljudpYJ5" name="Игрок и Связи с ним">
-    <mxGraphModel dx="1988" dy="1096" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1737" dy="892" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -180,46 +180,82 @@
         <mxCell id="vNIWAAsK77wDa6MJHVwv-7" value="&lt;div&gt;+ start()&lt;/div&gt;&lt;div&gt;+ processCommand(input: string): void&lt;/div&gt;&lt;div&gt;+ isGameOver(): bool&lt;/div&gt;&lt;div&gt;+ main(): Main&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="vNIWAAsK77wDa6MJHVwv-3" vertex="1">
           <mxGeometry y="20" width="370" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-4" value="Main" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-4" value="Main" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="610" y="190" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-8" value="-world: World" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="vVMuym7QK-VfiuL8AU1q-4">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-8" value="-world: World" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="vVMuym7QK-VfiuL8AU1q-4" vertex="1">
           <mxGeometry y="20" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-9" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ play(): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ exit(): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="vVMuym7QK-VfiuL8AU1q-4">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-9" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ play(): void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ exit(): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="vVMuym7QK-VfiuL8AU1q-4" vertex="1">
           <mxGeometry y="110" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="vNIWAAsK77wDa6MJHVwv-7" target="vVMuym7QK-VfiuL8AU1q-4">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;endArrow=none;startFill=0;" parent="1" source="vNIWAAsK77wDa6MJHVwv-7" target="vVMuym7QK-VfiuL8AU1q-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="740" y="450" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-11" value="World" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-11" value="World" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="610" y="520" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-12" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="vVMuym7QK-VfiuL8AU1q-11">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-12" value="&lt;div&gt;- stations: vector&amp;lt;Station&amp;gt;&lt;/div&gt;&lt;div&gt;- currentStation: Station*&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="vVMuym7QK-VfiuL8AU1q-11" vertex="1">
           <mxGeometry y="20" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-13" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vVMuym7QK-VfiuL8AU1q-11">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-13" value="&lt;span style=&quot;text-align: left;&quot;&gt;+ moveTo(stationName: string): void&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="vVMuym7QK-VfiuL8AU1q-11" vertex="1">
           <mxGeometry y="110" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-14" value="Station" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-14" value="Station" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="240" y="640" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-15" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="vVMuym7QK-VfiuL8AU1q-14">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-15" value="&lt;div&gt;- name: string&lt;/div&gt;&lt;div&gt;- description: string&lt;/div&gt;&lt;div&gt;- npcs: vector&amp;lt;NPC&amp;gt;&lt;/div&gt;&lt;div&gt;- items: vector&amp;lt;Item&amp;gt;&lt;/div&gt;&lt;div&gt;- events: vector&amp;lt;Event&amp;gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="vVMuym7QK-VfiuL8AU1q-14" vertex="1">
           <mxGeometry y="20" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-16" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vVMuym7QK-VfiuL8AU1q-14">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-16" value="&lt;div&gt;+ inspect(): void&lt;/div&gt;&lt;div&gt;+ talkTo(npcName: string): void&lt;/div&gt;&lt;div&gt;+ search(): Event&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="vVMuym7QK-VfiuL8AU1q-14" vertex="1">
           <mxGeometry y="110" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-17" value="Fight" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-17" value="Fight" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1020" y="650" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-18" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="vVMuym7QK-VfiuL8AU1q-17">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-18" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="vVMuym7QK-VfiuL8AU1q-17" vertex="1">
           <mxGeometry y="20" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-19" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vVMuym7QK-VfiuL8AU1q-17">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-19" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="vVMuym7QK-VfiuL8AU1q-17" vertex="1">
           <mxGeometry y="110" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-1" value="NPC" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="969" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-2" value="&lt;div&gt;- name: string&lt;/div&gt;&lt;div&gt;- dialogue: vector&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;- questGiven: Quest*&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="vdGJCKuas1NTcFJgYV4j-1">
+          <mxGeometry y="20" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-3" value="+ talk(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="vdGJCKuas1NTcFJgYV4j-1">
+          <mxGeometry y="100" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-4" value="quest" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="950" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-5" value="+ complete(): void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vdGJCKuas1NTcFJgYV4j-4">
+          <mxGeometry y="100" width="200" height="99" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-6" value="&lt;div&gt;- title: string&lt;/div&gt;&lt;div&gt;- description: string&lt;/div&gt;&lt;div&gt;- isCompleted: bool&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vdGJCKuas1NTcFJgYV4j-4">
+          <mxGeometry y="20" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-9" value="questLog" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1240" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-10" value="&lt;div&gt;+ addQuest(q: Quest): void&lt;/div&gt;&lt;div&gt;+ listQuests(): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vdGJCKuas1NTcFJgYV4j-9">
+          <mxGeometry y="100" width="200" height="99" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-11" value="- quests: vector&amp;lt;Quest&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vdGJCKuas1NTcFJgYV4j-9">
+          <mxGeometry y="20" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-13" value="Enemy" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1560" y="1340" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-14" value="&lt;div&gt;+ addQuest(q: Quest): void&lt;/div&gt;&lt;div&gt;+ listQuests(): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vdGJCKuas1NTcFJgYV4j-13">
+          <mxGeometry y="100" width="200" height="99" as="geometry" />
+        </mxCell>
+        <mxCell id="vdGJCKuas1NTcFJgYV4j-15" value="- quests: vector&amp;lt;Quest&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="vdGJCKuas1NTcFJgYV4j-13">
+          <mxGeometry y="20" width="200" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
