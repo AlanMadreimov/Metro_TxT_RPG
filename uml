@@ -29,7 +29,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="pqbc91mAlIcmljudpYJ5" name="Игрок и Связи с ним">
-    <mxGraphModel dx="747" dy="353" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1897" dy="895" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -117,7 +117,7 @@
         <mxCell id="Zz8gxZec43Ak84KQyvbq-2" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-1" vertex="1">
           <mxGeometry y="140" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-3" value="+ melleDamage: int_fast8_t&lt;div&gt;+ fireDamage: int_fast8_t&lt;/div&gt;&lt;div&gt;+ range: int_fast8_t&lt;/div&gt;&lt;div&gt;+ twoHands: bool&lt;/div&gt;&lt;div&gt;+ timeUse: int_fast8_t&lt;/div&gt;&lt;div&gt;+ reload: int_fast8_t&lt;/div&gt;&lt;div&gt;+ tiredUp: int_fast8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-1" vertex="1">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-3" value="+ melleDamage: int_fast8_t&lt;div&gt;+ fireDamage: int_fast8_t&lt;/div&gt;&lt;div&gt;+ range: int_fast8_t&lt;/div&gt;&lt;div&gt;+ twoHands: bool&lt;/div&gt;&lt;div&gt;+ reload: int_fast8_t&lt;/div&gt;&lt;div&gt;+ tiredUp: int_fast8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-1" vertex="1">
           <mxGeometry y="20" width="260" height="120" as="geometry" />
         </mxCell>
         <mxCell id="Zz8gxZec43Ak84KQyvbq-4" value="Armor" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -220,7 +220,7 @@
         <mxCell id="vVMuym7QK-VfiuL8AU1q-16" value="&lt;div&gt;+ inspect(): void&lt;/div&gt;&lt;div&gt;+ talkTo(npcName: string): void&lt;/div&gt;&lt;div&gt;+ search(): Event&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="vVMuym7QK-VfiuL8AU1q-14" vertex="1">
           <mxGeometry y="110" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="coDyJiwTyKJTcGDhC5fz-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="vVMuym7QK-VfiuL8AU1q-17" target="K2XrHp8rcPxL4InWE_2a-1">
+        <mxCell id="coDyJiwTyKJTcGDhC5fz-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endArrow=none;startFill=0;" parent="1" source="vVMuym7QK-VfiuL8AU1q-17" target="K2XrHp8rcPxL4InWE_2a-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vVMuym7QK-VfiuL8AU1q-17" value="Fight" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
