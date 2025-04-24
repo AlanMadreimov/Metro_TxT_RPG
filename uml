@@ -29,14 +29,14 @@
     </mxGraphModel>
   </diagram>
   <diagram id="pqbc91mAlIcmljudpYJ5" name="Игрок и Связи с ним">
-    <mxGraphModel dx="1169" dy="645" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1046" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="K2XrHp8rcPxL4InWE_2a-1" value="Player" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="610" y="360" width="380" height="590" as="geometry" />
         </mxCell>
-        <mxCell id="K2XrHp8rcPxL4InWE_2a-3" value="&lt;div&gt;+ takeDamage ( body_part: string, damage:&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;arr [ rad:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t, phys:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t], wound: Wound&amp;nbsp;&lt;/span&gt;): void&lt;/div&gt;&lt;div&gt;+ attack(type: enum [melle, fire] ): arr [ time:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int8_t&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, damage:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int8_t&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, effect: arr [destroyWeapon: bool, slowDown: int8_t, stun: int8_t&amp;nbsp; ]]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ skill(type: enum[sk1, sk2, sk3, sk4]):&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="K2XrHp8rcPxL4InWE_2a-1" vertex="1">
+        <mxCell id="K2XrHp8rcPxL4InWE_2a-3" value="&lt;div&gt;+ takeDamage ( body_part: string, damage:&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;arr [ rad:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t, phys:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); background-color: transparent;&quot;&gt;int_fast8_t], wound: Wound&amp;nbsp;&lt;/span&gt;): void&lt;/div&gt;&lt;div&gt;+ attack(type: enum [melle, fire] ): arr [ time:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int8_t&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, damage:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int8_t&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;, effect: arr [destroyWeapon: bool, slowDown: int8_t, stun: int8_t&amp;nbsp; ]]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ useSkillOfPerchatka(type: enum[sk1, sk2, sk3, sk4]):&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="K2XrHp8rcPxL4InWE_2a-1" vertex="1">
           <mxGeometry y="370" width="380" height="220" as="geometry" />
         </mxCell>
         <mxCell id="K2XrHp8rcPxL4InWE_2a-2" value="- health: Health&lt;div&gt;- skills: Skills&lt;/div&gt;&lt;div&gt;- inv: Inventory&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-tired: int8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="K2XrHp8rcPxL4InWE_2a-1" vertex="1">
@@ -121,55 +121,55 @@
         <mxCell id="2aNArI0BQHGTmsO4QB2B-8" value="1" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="2aNArI0BQHGTmsO4QB2B-7" connectable="0" vertex="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=blockThin;endFill=0;endSize=20;" edge="1" parent="1" source="Zz8gxZec43Ak84KQyvbq-1" target="O2UAJy6HJNhmIMR7Ghev-7">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=blockThin;endFill=0;endSize=20;" parent="1" source="Zz8gxZec43Ak84KQyvbq-1" target="O2UAJy6HJNhmIMR7Ghev-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-1" value="Weapon" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="930" width="260" height="260" as="geometry" />
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-1" value="Weapon" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1020" y="930" width="260" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-2" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-1">
-          <mxGeometry y="130" width="260" height="130" as="geometry" />
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-2" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-1" vertex="1">
+          <mxGeometry y="140" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-3" value="+ melleDamage: int_fast8_t&lt;div&gt;+ fireDamage: int_fast8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-1">
-          <mxGeometry y="20" width="260" height="110" as="geometry" />
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-3" value="+ melleDamage: int_fast8_t&lt;div&gt;+ fireDamage: int_fast8_t&lt;/div&gt;&lt;div&gt;+ range: int_fast8_t&lt;/div&gt;&lt;div&gt;+ twoHands: bool&lt;/div&gt;&lt;div&gt;+ timeForAttack: int_fast8_t&lt;/div&gt;&lt;div&gt;+ reload: int_fast8_t&lt;/div&gt;&lt;div&gt;+ timeToChange: int_fast8_t&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-1" vertex="1">
+          <mxGeometry y="20" width="260" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-4" value="Armor" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-4" value="Armor" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1340" y="930" width="260" height="260" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-5" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-4">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-5" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-4" vertex="1">
           <mxGeometry y="130" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-6" value="&lt;div&gt;+ radArmor:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ physArmor:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ typeArmor: enum[ head, body, hands, legs]&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-4">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-6" value="&lt;div&gt;+ radArmor:&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ physArmor:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int_fast8_t&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ typeArmor: enum[ head, body, hands, legs]&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-4" vertex="1">
           <mxGeometry y="20" width="260" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;endArrow=blockThin;endFill=0;endSize=20;" edge="1" parent="1" source="Zz8gxZec43Ak84KQyvbq-7" target="O2UAJy6HJNhmIMR7Ghev-7">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;endArrow=blockThin;endFill=0;endSize=20;" parent="1" source="Zz8gxZec43Ak84KQyvbq-7" target="O2UAJy6HJNhmIMR7Ghev-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-7" value="Cons" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-7" value="Cons" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1654" y="930" width="260" height="260" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-8" value="+ effectOfUse(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-7">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-8" value="+ effectOfUse(): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-7" vertex="1">
           <mxGeometry y="130" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-9" value="- heal: int8_t&lt;br&gt;- healWounds: arr [Wound] * n&lt;div&gt;- tiredDown: int8_t&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-7">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-9" value="- heal: int8_t&lt;br&gt;- healWounds: arr [Wound] * n&lt;div&gt;- tiredDown: int8_t&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-7" vertex="1">
           <mxGeometry y="20" width="260" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=blockThin;endFill=0;endSize=20;" edge="1" parent="1" source="Zz8gxZec43Ak84KQyvbq-10" target="O2UAJy6HJNhmIMR7Ghev-7">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=blockThin;endFill=0;endSize=20;" parent="1" source="Zz8gxZec43Ak84KQyvbq-10" target="O2UAJy6HJNhmIMR7Ghev-7" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2060" y="885.0000000000002" as="sourcePoint" />
             <mxPoint x="1850" y="610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-10" value="Base" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-10" value="Base" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1950" y="930" width="260" height="260" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-11" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-10">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-11" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-10" vertex="1">
           <mxGeometry y="130" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-12" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="Zz8gxZec43Ak84KQyvbq-10">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-12" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Zz8gxZec43Ak84KQyvbq-10" vertex="1">
           <mxGeometry y="20" width="260" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="Zz8gxZec43Ak84KQyvbq-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.164;entryY=1.026;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=blockThin;endFill=0;endSize=20;" edge="1" parent="1" source="Zz8gxZec43Ak84KQyvbq-4" target="O2UAJy6HJNhmIMR7Ghev-7">
+        <mxCell id="Zz8gxZec43Ak84KQyvbq-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.164;entryY=1.026;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=blockThin;endFill=0;endSize=20;" parent="1" source="Zz8gxZec43Ak84KQyvbq-4" target="O2UAJy6HJNhmIMR7Ghev-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
