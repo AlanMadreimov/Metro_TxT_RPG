@@ -128,30 +128,6 @@ Trails/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/build
 .PHONY : Trails/fast
 
-Game.obj: Game.cpp.obj
-.PHONY : Game.obj
-
-# target to build an object file
-Game.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/Game.cpp.obj
-.PHONY : Game.cpp.obj
-
-Game.i: Game.cpp.i
-.PHONY : Game.i
-
-# target to preprocess a source file
-Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/Game.cpp.i
-.PHONY : Game.cpp.i
-
-Game.s: Game.cpp.s
-.PHONY : Game.s
-
-# target to generate assembly for a file
-Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/Game.cpp.s
-.PHONY : Game.cpp.s
-
 Game/BattleManager.obj: Game/BattleManager.cpp.obj
 .PHONY : Game/BattleManager.obj
 
@@ -176,6 +152,54 @@ Game/BattleManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/Game/BattleManager.cpp.s
 .PHONY : Game/BattleManager.cpp.s
 
+Game/Character.obj: Game/Character.cpp.obj
+.PHONY : Game/Character.obj
+
+# target to build an object file
+Game/Character.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/Game/Character.cpp.obj
+.PHONY : Game/Character.cpp.obj
+
+Game/Character.i: Game/Character.cpp.i
+.PHONY : Game/Character.i
+
+# target to preprocess a source file
+Game/Character.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/Game/Character.cpp.i
+.PHONY : Game/Character.cpp.i
+
+Game/Character.s: Game/Character.cpp.s
+.PHONY : Game/Character.s
+
+# target to generate assembly for a file
+Game/Character.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/Game/Character.cpp.s
+.PHONY : Game/Character.cpp.s
+
+Game/Game.obj: Game/Game.cpp.obj
+.PHONY : Game/Game.obj
+
+# target to build an object file
+Game/Game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/Game/Game.cpp.obj
+.PHONY : Game/Game.cpp.obj
+
+Game/Game.i: Game/Game.cpp.i
+.PHONY : Game/Game.i
+
+# target to preprocess a source file
+Game/Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/Game/Game.cpp.i
+.PHONY : Game/Game.cpp.i
+
+Game/Game.s: Game/Game.cpp.s
+.PHONY : Game/Game.s
+
+# target to generate assembly for a file
+Game/Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Trails.dir\build.make CMakeFiles/Trails.dir/Game/Game.cpp.s
+.PHONY : Game/Game.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Trails
-	@echo ... Game.obj
-	@echo ... Game.i
-	@echo ... Game.s
 	@echo ... Game/BattleManager.obj
 	@echo ... Game/BattleManager.i
 	@echo ... Game/BattleManager.s
+	@echo ... Game/Character.obj
+	@echo ... Game/Character.i
+	@echo ... Game/Character.s
+	@echo ... Game/Game.obj
+	@echo ... Game/Game.i
+	@echo ... Game/Game.s
 .PHONY : help
 
 
