@@ -65,6 +65,14 @@ build CMakeFiles/Trails.dir/Game/BattleManager.cpp.obj: CXX_COMPILER__Trails_uns
   TARGET_COMPILE_PDB = CMakeFiles\Trails.dir\
   TARGET_PDB = Trails.pdb
 
+build CMakeFiles/Trails.dir/Game/Character.cpp.obj: CXX_COMPILER__Trails_unscanned_Debug D$:/Repository/Trails/Game/Character.cpp || cmake_object_order_depends_target_Trails
+  DEP_FILE = CMakeFiles\Trails.dir\Game\Character.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Trails.dir
+  OBJECT_FILE_DIR = CMakeFiles\Trails.dir\Game
+  TARGET_COMPILE_PDB = CMakeFiles\Trails.dir\
+  TARGET_PDB = Trails.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Trails
@@ -73,7 +81,7 @@ build CMakeFiles/Trails.dir/Game/BattleManager.cpp.obj: CXX_COMPILER__Trails_uns
 #############################################
 # Link the executable Trails.exe
 
-build Trails.exe: CXX_EXECUTABLE_LINKER__Trails_Debug CMakeFiles/Trails.dir/Game/Game.cpp.obj CMakeFiles/Trails.dir/Game/BattleManager.cpp.obj
+build Trails.exe: CXX_EXECUTABLE_LINKER__Trails_Debug CMakeFiles/Trails.dir/Game/Game.cpp.obj CMakeFiles/Trails.dir/Game/BattleManager.cpp.obj CMakeFiles/Trails.dir/Game/Character.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Trails.dir
