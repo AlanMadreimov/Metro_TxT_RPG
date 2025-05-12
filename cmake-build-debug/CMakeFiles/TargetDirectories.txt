@@ -1,3 +1,3 @@
-D:/Repository/Trails/cmake-build-debug/CMakeFiles/Trails.dir
-D:/Repository/Trails/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Repository/Trails/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/k0wal/CLionProjects/Trails/cmake-build-debug/CMakeFiles/Trails.dir
+C:/Users/k0wal/CLionProjects/Trails/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/k0wal/CLionProjects/Trails/cmake-build-debug/CMakeFiles/rebuild_cache.dir

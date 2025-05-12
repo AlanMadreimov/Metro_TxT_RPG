@@ -3,4 +3,7 @@ project(Trails)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Trails Game.cpp)
+add_executable(Trails Game/Game.cpp
+        Game/BattleManager.cpp
+        Game/BattleManager.h
+)
