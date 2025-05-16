@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-class Skill;  // Предварительное объявление
+class Skill;
 
 class Character {
 protected:
@@ -16,6 +16,7 @@ protected:
     int speed;
 
 public:
+    std::string tag;
     Character(std::string name, int hp, int mp, int atk, int def, int spd);
     virtual ~Character() = default;
 
@@ -26,7 +27,7 @@ public:
 
     // Боевые действия
     virtual void attackTarget(Character& target);
-    virtual void useSkill(Skill& skill, Character& target);
+//    virtual void useSkill(Skill& skill, Character& target);
 
     // Геттеры
     std::string getName() const { return name; }

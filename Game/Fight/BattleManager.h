@@ -8,11 +8,12 @@
 #include <vector>
 #include <mutex>
 #include <condition_variable>
-#include "Character.h"
+#include "../Characters/Character.h"
 
 class BattleManager {
 private:
     std::vector<Character*> participants;
+
 
 
 public:

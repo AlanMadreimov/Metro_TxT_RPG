@@ -1,5 +1,5 @@
 #include "Character.h"
-#include "Skill.h"
+//#include "Skill.h"
 #include <iostream>
 
 Character::Character(std::string name, int hp, int mp, int atk, int def, int spd)
@@ -24,11 +24,11 @@ void Character::attackTarget(Character& target) {
     target.takeDamage(damage);
 }
 
-void Character::useSkill(Skill& skill, Character& target) {
-    if (mp >= skill.getMpCost()) {
-        mp -= skill.getMpCost();
-        skill.apply(*this, target);
-    } else {
-        std::cout << "Не хватает MP!\n";
-    }
-}
+//void Character::useSkill(Skill& skill, Character& target) {
+//    if (mp >= skill.getMpCost()) {
+//        mp -= skill.getMpCost();
+//        skill.apply(*this, target);
+//    } else {
+//        std::cout << "Не хватает MP!\n";
+//    }
+//}

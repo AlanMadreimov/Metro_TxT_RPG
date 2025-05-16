@@ -1,6 +1,10 @@
-#include "BattleManager.h"
+#include "../Fight/BattleManager.h"
 #include <string>
 #include <iostream>
+
+std::atomic<bool> commandEntered(false);
+std::mutex mtx;
+std::condition_variable cv;
 
 void BattleManager::addParticipant(Character* character) {
     participants.push_back(character);
@@ -9,7 +13,7 @@ void BattleManager::addParticipant(Character* character) {
 void BattleManager::inputListener() {
     std::string input;
     std::getline(std::cin, input);
-    if (input == "heal") {  // Check for specific command
+    if (input == "heal") {
         commandEntered = true;
         cv.notify_one();
     }
@@ -17,7 +21,6 @@ void BattleManager::inputListener() {
 
 
 void BattleManager::startBattle() {
-    // Сортировка по скорости (первыми ходят быстрые)
     std::sort(participants.begin(), participants.end(), 
         [](Character* a, Character* b) { return a->getSpeed() > b->getSpeed(); });
 
@@ -25,7 +28,7 @@ void BattleManager::startBattle() {
         for (Character* actor : participants) {
             if (!actor->isAlive()) continue;
 
-            // Пример простого ИИ: атакуем первого живого врага
+
             for (Character* target : participants) {
                 if (target != actor && target->isAlive()) {
                     actor->attackTarget(*target);
@@ -33,7 +36,6 @@ void BattleManager::startBattle() {
                 }
             }
 
-            // Проверка конца боя
             int aliveCount = 0;
             for (Character* c : participants) {
                 if (c->isAlive()) aliveCount++;
