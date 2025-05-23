@@ -12,4 +12,6 @@ add_executable(Trails Game/Game.cpp
         Game/World/World.h
         Game/World/Station.cpp
         Game/World/Station.h
+        Game/Utilities.cpp
+        Game/Utilities.h
 )
