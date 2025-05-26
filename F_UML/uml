@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36" version="27.0.6">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36" version="27.0.8">
   <diagram id="pqbc91mAlIcmljudpYJ5" name="Game">
     <mxGraphModel dx="851" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
@@ -174,10 +174,10 @@
         <mxCell id="vVMuym7QK-VfiuL8AU1q-11" value="World" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="610" y="460" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-12" value="&lt;div&gt;- stations: vector&amp;lt;Station&amp;gt;&lt;/div&gt;&lt;div&gt;- currentStation: Station*&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="vVMuym7QK-VfiuL8AU1q-11" vertex="1">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-12" value="&lt;div&gt;- stations: vector&amp;lt;Station&amp;gt;&lt;/div&gt;&lt;div&gt;- currentStation: Station*&lt;/div&gt;&lt;div&gt;- currentWorldTime: int&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="vVMuym7QK-VfiuL8AU1q-11" vertex="1">
           <mxGeometry y="20" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="vVMuym7QK-VfiuL8AU1q-13" value="&lt;span style=&quot;text-align: left;&quot;&gt;+ moveTo(stationName: string): void&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="vVMuym7QK-VfiuL8AU1q-11" vertex="1">
+        <mxCell id="vVMuym7QK-VfiuL8AU1q-13" value="&lt;span style=&quot;text-align: left;&quot;&gt;+ moveTo(stationName: string): void&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;&quot;&gt;+ getWorldTime(): int&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;&quot;&gt;+ goWorldTime(): void&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="vVMuym7QK-VfiuL8AU1q-11" vertex="1">
           <mxGeometry y="110" width="200" height="90" as="geometry" />
         </mxCell>
         <mxCell id="vdGJCKuas1NTcFJgYV4j-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=diamondThin;endFill=1;endSize=13;" parent="1" source="vVMuym7QK-VfiuL8AU1q-14" target="vVMuym7QK-VfiuL8AU1q-12" edge="1">
@@ -432,16 +432,16 @@
             <mxGeometry x="4224" y="1300" width="130" height="40" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="JAlikhkS43AhgTw_DvoU-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startFill=0;" edge="1" parent="1" source="JAlikhkS43AhgTw_DvoU-4" target="vNIWAAsK77wDa6MJHVwv-7">
+        <mxCell id="JAlikhkS43AhgTw_DvoU-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startFill=0;" parent="1" source="JAlikhkS43AhgTw_DvoU-4" target="vNIWAAsK77wDa6MJHVwv-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="JAlikhkS43AhgTw_DvoU-4" value="Utilities" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="JAlikhkS43AhgTw_DvoU-4" value="Utilities" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="310" y="90" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="JAlikhkS43AhgTw_DvoU-5" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="JAlikhkS43AhgTw_DvoU-4">
+        <mxCell id="JAlikhkS43AhgTw_DvoU-5" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="JAlikhkS43AhgTw_DvoU-4" vertex="1">
           <mxGeometry y="20" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="JAlikhkS43AhgTw_DvoU-6" value="&lt;span style=&quot;&quot;&gt;+ ClearConsole(): void&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="JAlikhkS43AhgTw_DvoU-4">
+        <mxCell id="JAlikhkS43AhgTw_DvoU-6" value="&lt;span style=&quot;&quot;&gt;+ ClearConsole(): void&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="JAlikhkS43AhgTw_DvoU-4" vertex="1">
           <mxGeometry y="110" width="200" height="90" as="geometry" />
         </mxCell>
       </root>
