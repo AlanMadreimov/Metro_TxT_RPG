@@ -1,14 +1,11 @@
-//
-// Created by Omen on 23.05.2025.
-//
-
+#include <iostream>
 #ifndef UTILITIES_H
 #define UTILITIES_H
 
 
 
 void ClearConsole();
-
+bool searchStringInFile(const std::string& filename, const std::string& searchString);
 
 
 #endif //UTILITIES_H

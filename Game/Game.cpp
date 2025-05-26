@@ -9,11 +9,14 @@ using namespace std;
 class MainMenu {
 private:
     string currentSaveName;
-    void save(std::string name) {
+
+
+
+    bool save(std::string name) {
         std::filesystem::path dir_path = "C:/TrailsSaves";
 
         if (!std::filesystem::exists(dir_path)) {
-            std::filesystem::create_directory(dir_path); // Или create_directories для вложенных путей
+            std::filesystem::create_directory(dir_path);
             std::cout << "Created: " << dir_path << std::endl;
         }
 
@@ -23,8 +26,17 @@ private:
             file.open(file_path, std::ios::out);
         }
         file.close();
-        std::cout << "Saved";
+        fstream savesNames("../SavesNames.txt",fstream::app);
+        if (!savesNames.is_open()) {
 
+        }
+        if (!searchStringInFile("../SavesNames.txt",name)) {
+            savesNames << name + " ";
+            savesNames.close();
+            return true;
+        }
+        savesNames.close();
+        return false;
     }
 
     void load (std::string name) {
@@ -45,18 +57,26 @@ public:
             cin >> choice;
             if (choice == "1") {
                 ClearConsole();
-                cout << "Please enter game name";
+                cout << "Please enter game name:\n";
                 string nameOfSave;
                 cin >> nameOfSave;
-                save(nameOfSave);
-                World wrld();
-                save(nameOfSave);
-                cout << "Starting your engine";
-                break;
-            }else if (choice == "2") {
-                // Menu to choice saves
-                // Load and create World with this data
-                cout << "Load Screen";
+                if (save(nameOfSave)) {
+                    World wrld;
+                    wrld.start();
+                }
+                else {
+
+                }
+
+            } else if (choice == "2") {
+                ifstream file("../SavesNames.txt");
+
+
+                string choice;
+                cout << "Please choise";
+                cin >> choice;
+
+
                 break;
             }else if (choice == "3"){
                 cout << "Exit";

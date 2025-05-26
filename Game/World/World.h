@@ -11,12 +11,11 @@ private:
     int currentWorldTime;
 public:
     World() {}
-    World(std::vector <Station> stations_sv) {}
-
-    void moveTo(std::string stationName){};
-    void goWorldTime(){};
-    int getWorldTime(){};
-    void start(){};
+    World(std::vector <Station> stations_sv){};
+    void moveTo(std::string stationName);
+    void goWorldTime();
+    int getWorldTime();
+    void start();
 };
 
 
