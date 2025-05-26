@@ -8,12 +8,15 @@ class World {
 private:
     std::vector <Station> stations;
     Station currentStation;
+    int currentWorldTime;
 public:
     World() {}
     World(std::vector <Station> stations_sv) {}
 
     void moveTo(std::string stationName){};
-
+    void goWorldTime(){};
+    int getWorldTime(){};
+    void start(){};
 };
 
 

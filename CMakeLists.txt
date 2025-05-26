@@ -18,4 +18,6 @@ add_executable(Trails Game/Game.cpp
         Game/Items/Item.h
         Game/World/Events.cpp
         Game/World/Events.h
+        Game/World/NPC.cpp
+        Game/World/NPC.h
 )
