@@ -17,9 +17,11 @@ private:
     std::vector<Item> canFindItems;
     std::vector<Events> canBeEvents;
 public:
-    void inspect(){};
-    void search(){};
-    void talkTo(){};
+    Station();
+    void enter();
+    void inspect();
+    void search();
+    void talkTo();
 };
 
 
