@@ -1,23 +1,20 @@
-cmake_minimum_required(VERSION 3.30)
-project(Trails)
+cmake_minimum_required(VERSION 3.10)
+project(rpg_game)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(Trails Game/Game.cpp
-        Game/Fight/BattleManager.cpp
-        Game/Fight/BattleManager.h
-        Game/Characters/Character.cpp
-        Game/Characters/Character.h
-        Game/World/World.cpp
-        Game/World/World.h
-        Game/World/Station.cpp
-        Game/World/Station.h
-        Game/Utilities.cpp
-        Game/Utilities.h
-        Game/Items/Item.cpp
-        Game/Items/Item.h
-        Game/World/Events.cpp
-        Game/World/Events.h
-        Game/World/NPC.cpp
-        Game/World/NPC.h
+# Создаем папку data, если ее нет
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/data)
+
+# Копируем файлы данных
+configure_file(data/character_data.txt ${CMAKE_BINARY_DIR}/data/character_data.txt COPYONLY)
+
+add_executable(rpg_game
+        src/main.cpp
+        src/character.cpp
+        src/game.cpp
+        src/utils.cpp
 )
+
+target_include_directories(rpg_game PRIVATE include)
