@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36" version="27.1.4">
   <diagram id="pqbc91mAlIcmljudpYJ5" name="Game">
-    <mxGraphModel dx="595" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1042" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -12,6 +12,12 @@
         </mxCell>
         <mxCell id="5Z6LL0dOkFgTwms2IkeJ-3" value="+ Trim(std::string&amp;amp; str): void&lt;div&gt;+ ClearConsole() : void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="5Z6LL0dOkFgTwms2IkeJ-1">
           <mxGeometry y="110" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5Z6LL0dOkFgTwms2IkeJ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;startFill=1;startArrow=diamond;targetPerimeterSpacing=0;endSize=6;startSize=15;" edge="1" parent="1" source="5Z6LL0dOkFgTwms2IkeJ-6" target="5Z6LL0dOkFgTwms2IkeJ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5Z6LL0dOkFgTwms2IkeJ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;startFill=0;" edge="1" parent="1" source="5Z6LL0dOkFgTwms2IkeJ-4" target="5Z6LL0dOkFgTwms2IkeJ-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5Z6LL0dOkFgTwms2IkeJ-4" value="Game" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="770" y="130" width="200" height="330" as="geometry" />
