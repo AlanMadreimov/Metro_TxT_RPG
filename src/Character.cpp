@@ -130,9 +130,9 @@ void Character::LevelUp() {
 }
 
 void Character::CalculateStats() {
-  max_health_ = 20 + (level_ - 1) * kHealthPerLevel;
-  attack_ = 5 + (level_ - 1) * kAttackPerLevel;
-  defense_ = 3 + (level_ - 1) * kDefensePerLevel;
+  max_health_ += (level_ - 1) * kHealthPerLevel;
+  attack_ += (level_ - 1) * kAttackPerLevel;
+  defense_ += (level_ - 1) * kDefensePerLevel;
 }
 
 void Character::AddItem(const std::string& item, int quantity) {
@@ -155,6 +155,53 @@ bool Character::UseItem(const std::string& item) {
 int Character::GetItemCount(const std::string& item) const {
   auto it = inventory_.find(item);
   return it != inventory_.end() ? it->second : 0;
+}
+
+void Character::LoadClass(const std::string& file_path) {
+  std::ifstream file(file_path);
+  if (!file.is_open()) {
+    abort();
+  }
+  std::string line;
+  while (std::getline(file, line)) {
+    std::istringstream iss(line);
+    std::string key;
+    if (std::getline(iss, key, '=')) {
+      std::string value;
+      if (std::getline(iss, value)) {
+        utils::Trim(key);
+        utils::Trim(value);
+
+        if (key == "max_health") {
+          SetMaxHp(std::stoi(value));
+          AddHealth(max_health_-health_);
+        } else if (key == "attack") {
+          SetAttack(std::stoi(value));
+        }else if (key == "defense"){
+          SetDefense(std::stoi(value));
+        }else if (key == "gold"){
+          SetGold(std::stoi(value));
+        }else if (key == "item_Health Potion") {
+          AddItem("Health Potion", std::stoi(value));
+        }
+      }
+    }
+  }
+}
+
+void Character::SetClass(const std::string &character_class) {
+  class_ = character_class;
+  if (character_class == "Warrior") {
+    LoadClass("../data/warrior_data.txt");
+  }else if (character_class == "Medic") {
+    LoadClass("../data/medic_data.txt");
+  }else if (character_class == "Mechanic") {
+    LoadClass("../data/mechanic_data.txt");
+  }else if (character_class == "Huckster") {
+    LoadClass("../data/huckster_data.txt");
+  }
+
+
 }
 
 }  // namespace rpg

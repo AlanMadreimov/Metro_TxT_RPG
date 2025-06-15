@@ -28,17 +28,22 @@ namespace rpg {
 
         // Модификаторы характеристик
         void SetName(const std::string& name) { name_ = name; }
-        void SetClass(const std::string& character_class) { class_ = character_class; }
+        void SetClass(const std::string& character_class);
         void AddHealth(int value);
         void AddGold(int value) { gold_ += value; }
         void AddExperience(int value);
         void LevelUp();
+        void SetMaxHp (int value) {max_health_ = value; }
+        void SetAttack (int value) {attack_ = value; }
+        void SetDefense (int value) {defense_ = value; }
+        void SetGold (int value) {gold_ = value;}
 
         // Инвентарь
         void AddItem(const std::string& item, int quantity = 1);
         bool UseItem(const std::string& item);
         int GetItemCount(const std::string& item) const;
         const std::map<std::string, int>& GetInventory() const { return inventory_; }
+
 
     private:
         std::string name_;
@@ -52,7 +57,7 @@ namespace rpg {
         int experience_;
         int experience_to_next_level_;
         std::map<std::string, int> inventory_;
-
+        void LoadClass(const std::string&);
         void CalculateStats();
     };
 

@@ -1,0 +1,5 @@
+max_health = 20
+attack = 4
+defense = 5
+gold = 0
+item_Health Potion = 1
