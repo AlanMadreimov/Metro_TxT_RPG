@@ -31,6 +31,11 @@ namespace rpg {
                       const std::vector<std::string>& options) const;
         int GetChoice(int min, int max) const;
         void WaitForInput() const;
+
+        // Добавляем в private-секцию класса Game
+        bool game_completed_ = false;
+        void FinalBossBattle();
+        void ShowEnding();
     };
 
 }  // namespace rpg

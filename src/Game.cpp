@@ -25,9 +25,9 @@ const std::vector<std::string> kGameMenuOptions = {
 
 const std::vector<std::string> kCharacterClasses = {
   "Warrior",
-  "Mage",
-  "Rogue",
-  "Cleric"
+  "Huckster",
+  "Mechanic",
+  "Medic"
 };
 
 const std::vector<std::string> kEnemyNames = {
@@ -97,9 +97,6 @@ void Game::CreateCharacter() {
   character_.SetName(name);
   character_.SetClass(kCharacterClasses[class_choice - 1]);
 
-  // Начальные предметы
-  character_.AddItem("Health Potion", 3);
-
   game_running_ = true;
   std::cout << "\nCharacter created successfully!\n";
   WaitForInput();
@@ -121,7 +118,7 @@ void Game::LoadCharacter() {
 }
 
 void Game::GameLoop() {
-  while (game_running_) {
+  while (game_running_ && !game_completed_) {
     utils::ClearScreen();
     std::cout << "=== Adventure ===\n\n";
     PrintMenu("What will you do?", kGameMenuOptions);
@@ -144,6 +141,10 @@ void Game::GameLoop() {
         game_running_ = false;
         break;
     }
+  }
+  if (game_completed_) {
+    game_completed_ = false;
+    character_ = Character(); // Сброс персонажа
   }
 }
 
@@ -177,6 +178,13 @@ void Game::ShowStatus() const {
 void Game::Explore() {
   utils::ClearScreen();
   std::cout << "=== Exploring ===\n\n";
+
+  if (character_.GetLevel() >= 5 && !game_completed_) {
+    std::cout << "\nyou feel something starnge... IT'S A DRAGON!!!\n";
+    WaitForInput();
+    FinalBossBattle();
+    return;
+  }
 
   // 30% chance встретить врага
   if (std::rand() % 100 < 30) {
@@ -282,6 +290,78 @@ void Game::Battle() {
   }
 
   WaitForInput();
+}
+
+void Game::FinalBossBattle() {
+    std::string boss_name = "DEATH DRAGON";
+    int boss_hp = 100;
+    int boss_attack = 15;
+    int boss_defense = 8;
+    int turn_counter = 0;
+    bool boss_enhanced = false;
+
+    std::cout << "=== FINAL BATTLE ===\n";
+    std::cout << boss_name << " appers!\n\n";
+
+    while (character_.GetHealth() > 0 && boss_hp > 0) {
+        turn_counter++;
+
+        // Проверка усиления босса
+        if (turn_counter % 3 == 0 && !boss_enhanced) {
+            boss_attack += 3;
+            boss_enhanced = true;
+            std::cout << boss_name << " getting strong! His attack is now " << boss_attack << "!\n";
+        }
+
+        // Стандартный бой
+        int damage = std::max(1, character_.GetAttack() - boss_defense / 2);
+        boss_hp -= damage;
+        std::cout << "You hit " << damage << " damage!\n";
+
+        if (boss_hp <= 0) {
+            std::cout << "\nYou won " << boss_name << "!!!\n";
+            character_.AddGold(500);
+            character_.AddExperience(300);
+            game_completed_ = true;
+            ShowEnding();
+            return;
+        }
+
+        // Критический удар босса
+        bool is_critical = (std::rand() % 100) < 20;
+        int boss_damage = std::max(1, boss_attack - character_.GetDefense() / 2);
+
+        if (is_critical) {
+            boss_damage = static_cast<int>(boss_damage * 1.5);
+            std::cout << boss_name << " hit critical damage! ";
+        }
+
+        character_.AddHealth(-boss_damage);
+        std::cout << boss_name << " attacked " << boss_damage << " damage.\n";
+
+        if (character_.GetHealth() <= 0) {
+            std::cout << "You lost against " << boss_name << "...\n";
+            character_.AddHealth(character_.GetMaxHealth());
+            character_.AddGold(-100); // Штраф за смерть
+            return;
+        }
+
+        WaitForInput();
+    }
+}
+
+void Game::ShowEnding() {
+    utils::ClearScreen();
+    std::cout << "=== WIN ===\n\n";
+    std::cout << "You won death dragon and finish your adventure!\n\n";
+
+    std::cout << "Gamer statistic:\n";
+    std::cout << "Level: " << character_.GetLevel() << "\n";
+    std::cout << "Summary gold: " << character_.GetGold() << "\n";
+
+    std::cout << "Thanks for the game!\n";
+    WaitForInput();
+    game_running_ = false;
 }
 
 void Game::Shop() {
