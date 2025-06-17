@@ -20,6 +20,7 @@ const std::vector<std::string> kMainMenuOptions = {
 const std::vector<std::string> kGameMenuOptions = {
   "Explore",
   "Shop",
+  "Sleep",
   "Status",
   "Save Game",
   "Main Menu"
@@ -180,13 +181,16 @@ void Game::GameLoop() {
       case 2:  // Shop
         Shop();
         break;
-      case 3:  // Status
+      case 3:
+        Sleep();
+        break;
+      case 4:  // Status
         ShowStatus();
         break;
-      case 4:  // Save Game
+      case 5:  // Save Game
         SaveGame();
         break;
-      case 5:  // Main Menu
+      case 6:  // Main Menu
         game_running_ = false;
         break;
     }
@@ -455,6 +459,28 @@ void Game::SaveGame() {
   }
   WaitForInput();
 }
+
+void Game::Sleep() {
+  std::cout << "Pay 5 gold or get out of here\n";
+  std::vector<std::string> options = {"Pay and sleep", "Return"};
+  PrintMenu("Sleep Options", options);
+  int choice = GetChoice(1,2);
+  if (choice == 1) {
+    if (character_.GetGold() >= 5) {
+      character_.AddHealth(character_.GetMaxHealth());
+      character_.AddGold(-5);
+      std::cout << "ZZZ....";
+      WaitForInput();
+      utils::ClearScreen();
+    }
+    else {
+      std::cout << "You don't have enough money";
+      WaitForInput();
+      utils::ClearScreen();
+    }
+  }
+}
+
 
 void Game::PrintMenu(const std::string& title,
                     const std::vector<std::string>& options) const {

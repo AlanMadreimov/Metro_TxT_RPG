@@ -10,7 +10,7 @@ namespace rpg {
     class Game {
     public:
         Game();
-
+        void Sleep();
         void Start();
         void MainMenu();
         void CreateCharacter();
