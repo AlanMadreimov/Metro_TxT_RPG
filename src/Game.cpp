@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
+
 #include "../include/utils.h"
 #include <limits>
 
@@ -100,6 +102,53 @@ void Game::CreateCharacter() {
   game_running_ = true;
   std::cout << "\nCharacter created successfully!\n";
   WaitForInput();
+  utils::ClearScreen();
+  std::cout << "Darkness. A ringing in his ears. His body felt crushed, yet he was breathing.\nAlexey opened his eyes a stranger with a flashlight loomed over him. 'Alive...' someone muttered.\nThey dragged him somewhere into the dimness. The stench of smoke, sweat, and blood filled his nose.\n";
+  WaitForInput();
+  std::string line;
+  std::ifstream hist;
+  //Предыстории по классам
+  switch (class_choice) {
+    case 1:
+      hist.open("../data/warrior_hist.txt");
+      if (!hist.is_open()) {
+        break;
+      }
+      utils::ClearScreen();
+      while (std::getline(hist, line)) {
+        std::cout << line << std::endl;
+      }
+      hist.close();
+      WaitForInput();
+      break;
+    case 2:
+      hist.open("../data/huckster_hist.txt");
+      utils::ClearScreen();
+      while (std::getline(hist, line)) {
+        std::cout << line << std::endl;
+      }
+      WaitForInput();
+      break;
+    case 3:
+      hist.open("../data/mechanic_hist.txt");
+      utils::ClearScreen();
+      while (std::getline(hist, line)) {
+        std::cout << line << std::endl;
+      }
+      WaitForInput();
+      break;
+    case 4:
+      hist.open("../data/medic_hist.txt");
+      utils::ClearScreen();
+      while (std::getline(hist, line)) {
+        std::cout << line << std::endl;
+      }
+      WaitForInput();
+      break;
+  }
+
+
+
 }
 
 void Game::LoadCharacter() {
@@ -287,6 +336,7 @@ void Game::Battle() {
     }
 
     WaitForInput();
+    utils::ClearScreen();
   }
 
   WaitForInput();
