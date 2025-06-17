@@ -34,15 +34,15 @@ const std::vector<std::string> kCharacterClasses = {
 };
 
 const std::vector<std::string> kEnemyNames = {
-  "Goblin",
-  "Orc",
-  "Skeleton",
+  "Zombie",
+  "Something in the dark",
+  "Robot",
   "Bandit",
-  "Wolf"
+  "Wild dog"
 };
 
 const std::vector<std::string> kShopItems = {
-  "Health Potion",
+  "Medical bandages",
   "Attack Boost",
   "Defense Boost"
 };
@@ -64,7 +64,7 @@ void Game::Start() {
 void Game::MainMenu() {
   while (true) {
     utils::ClearScreen();
-    std::cout << "=== RPG Game ===\n\n";
+    std::cout << "=== Trails ===\n\n";
     PrintMenu("Main Menu", kMainMenuOptions);
 
     int choice = GetChoice(1, kMainMenuOptions.size());
@@ -170,7 +170,7 @@ void Game::LoadCharacter() {
 void Game::GameLoop() {
   while (game_running_ && !game_completed_) {
     utils::ClearScreen();
-    std::cout << "=== Adventure ===\n\n";
+    std::cout << "=== The survivors' camp ===\n\n";
     PrintMenu("What will you do?", kGameMenuOptions);
 
     int choice = GetChoice(1, kGameMenuOptions.size());
@@ -233,7 +233,7 @@ void Game::Explore() {
   std::cout << "=== Exploring ===\n\n";
 
   if (character_.GetLevel() >= 5 && !game_completed_) {
-    std::cout << "\nyou feel something starnge... IT'S A DRAGON!!!\n";
+    std::cout << "\nYou feel something strange... IT'S A MUTATED HUMAN!!! What's happend with his arms?! Why is it so huge?!!?1\n";
     WaitForInput();
     FinalBossBattle();
     return;
@@ -275,8 +275,8 @@ void Game::Battle() {
     std::cout << enemy_name << " HP: " << enemy_health << "\n\n";
 
     std::vector<std::string> options = {"Attack"};
-    if (character_.GetItemCount("Health Potion") > 0) {
-      options.push_back("Use Health Potion");
+    if (character_.GetItemCount("Medical bandages") > 0) {
+      options.push_back("Use Medical bandages");
     }
     options.push_back("Run Away");
 
@@ -312,11 +312,11 @@ void Game::Battle() {
         character_.AddHealth(character_.GetMaxHealth());  // Восстановление
         break;
       }
-    } else if (options[choice - 1] == "Use Health Potion") {
-      character_.UseItem("Health Potion");
+    } else if (options[choice - 1] == "Use Medical bandages") {
+      character_.UseItem("Medical bandages");
       int heal_amount = 20 + character_.GetLevel() * 5;
       character_.AddHealth(heal_amount);
-      std::cout << "You used a Health Potion and recovered "
+      std::cout << "You used a Medical bandages and recovered "
                 << heal_amount << " HP!\n";
     } else if (options[choice - 1] == "Run Away") {
       if (std::rand() % 100 < 50) {  // 50% chance убежать
@@ -347,7 +347,7 @@ void Game::Battle() {
 }
 
 void Game::FinalBossBattle() {
-    std::string boss_name = "DEATH DRAGON";
+    std::string boss_name = "MUTATED HUMAN";
     int boss_hp = 100;
     int boss_attack = 15;
     int boss_defense = 8;
@@ -355,7 +355,7 @@ void Game::FinalBossBattle() {
     bool boss_enhanced = false;
 
     std::cout << "=== FINAL BATTLE ===\n";
-    std::cout << boss_name << " appers!\n\n";
+    std::cout << boss_name << " appears!\n\n";
 
     while (character_.GetHealth() > 0 && boss_hp > 0) {
         turn_counter++;
@@ -407,7 +407,7 @@ void Game::FinalBossBattle() {
 void Game::ShowEnding() {
     utils::ClearScreen();
     std::cout << "=== WIN ===\n\n";
-    std::cout << "You won death dragon and finish your adventure!\n\n";
+    std::cout << "You won the mutated human and finish your adventure!\n\n";
 
     std::cout << "Gamer statistic:\n";
     std::cout << "Level: " << character_.GetLevel() << "\n";
@@ -424,7 +424,7 @@ void Game::Shop() {
   std::cout << "Gold: " << character_.GetGold() << "\n\n";
 
   std::vector<std::pair<std::string, int>> shop_items = {
-    {"Health Potion", 20},
+    {"Medical bandages", 20},
     {"Attack Boost (+2 for current battle)", 30},
     {"Defense Boost (+2 for current battle)", 30}
   };

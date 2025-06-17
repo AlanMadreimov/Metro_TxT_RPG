@@ -2,4 +2,4 @@ max_health = 25
 attack = 3
 defense = 3
 gold = 0
-item_Health Potion = 3
+item_Medical bandages = 3
