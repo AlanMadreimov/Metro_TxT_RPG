@@ -181,8 +181,8 @@ void Character::LoadClass(const std::string& file_path) {
           SetDefense(std::stoi(value));
         }else if (key == "gold"){
           SetGold(std::stoi(value));
-        }else if (key == "item_Health Potion") {
-          AddItem("Health Potion", std::stoi(value));
+        }else if (key == "item_Medical bandages") {
+          AddItem("Medical bandages", std::stoi(value));
         }
       }
     }
