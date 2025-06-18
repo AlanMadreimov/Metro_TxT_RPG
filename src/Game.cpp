@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
+#include <algorithm>
 
 #include "../include/utils.h"
 #include <limits>
@@ -42,8 +43,9 @@ const std::vector<std::string> kEnemyNames = {
 
 const std::vector<std::string> kShopItems = {
   "Medical bandages",
-  "Attack Boost",
-  "Defense Boost"
+  "Weapon Scope (+2 Attack) - 100 gold (PERMANENT)",
+     "Armor Plating (+3 Defense) - 150 gold (PERMANENT)",
+    "Magic Amulet (+1 Attack, +1 Defense) - 120 gold (PERMANENT)"
 };
 
 }  // namespace
@@ -415,36 +417,86 @@ void Game::ShowEnding() {
 }
 
 void Game::Shop() {
-  utils::ClearScreen();
-  std::cout << "=== Shop ===\n\n";
-  std::cout << "Gold: " << character_.GetGold() << "\n\n";
+    utils::ClearScreen();
+    std::cout << "=== Shop ===\n\n";
+    std::cout << "Gold: " << character_.GetGold() << "\n\n";
 
-  std::vector<std::pair<std::string, int>> shop_items = {
-    {"Medical bandages", 20},
-    {"Attack Boost (+2 for current battle)", 30},
-    {"Defense Boost (+2 for current battle)", 30}
-  };
+    std::vector<std::pair<std::string, int>> shop_items = {
+        {"Health Potion", 20},
+        {"Weapon Scope", 100},
+        {"Armor Plating", 150},
+        {"Magic Amulet", 120}
+    };
 
-  std::vector<std::string> options;
-  for (const auto& item : shop_items) {
-    options.push_back(item.first + " - " + std::to_string(item.second) + " gold");
-  }
-  options.push_back("Exit");
+    std::vector<std::string> options;
+    for (const auto& item : shop_items) {
+        std::string option = item.first;
+        if (item.first == "Weapon Scope") option += " (+2 Attack)";
+        else if (item.first == "Armor Plating") option += " (+3 Defense)";
+        else if (item.first == "Magic Amulet") option += " (+1 Attack/Defense)";
 
-  PrintMenu("Shop Items", options);
-  int choice = GetChoice(1, options.size());
+        option += " - " + std::to_string(item.second) + " gold";
 
-  if (choice <= shop_items.size()) {
-    const auto& selected_item = shop_items[choice - 1];
-    if (character_.GetGold() >= selected_item.second) {
-      character_.AddGold(-selected_item.second);
-      character_.AddItem(selected_item.first);
-      std::cout << "\nYou bought a " << selected_item.first << "!\n";
-    } else {
-      std::cout << "\nNot enough gold!\n";
+        // Показываем "(PURCHASED)" если уже куплено
+        if (character_.HasItem(item.first)) {
+            option += " (PURCHASED)";
+        }
+
+        options.push_back(option);
     }
-    WaitForInput();
-  }
+    options.push_back("Exit");
+
+    PrintMenu("Shop Items", options);
+    int choice = GetChoice(1, options.size());
+
+    if (choice <= shop_items.size()) {
+        const auto& selected_item = shop_items[choice - 1];
+
+        // Проверяем, не куплен ли уже этот предмет
+        if (character_.HasItem(selected_item.first)) {
+            std::cout << "\nYou already have this upgrade!\n";
+            WaitForInput();
+            return;
+        }
+
+        if (character_.GetGold() >= selected_item.second) {
+            character_.AddGold(-selected_item.second);
+
+            // Применяем эффекты постоянных улучшений
+            if (selected_item.first == "Weapon Scope") {
+                character_.AddPermanentAttackBonus(2);
+                character_.AddItem("Weapon Scope");
+            }
+            else if (selected_item.first == "Armor Plating") {
+                character_.AddPermanentDefenseBonus(3);
+                character_.AddItem("Armor Plating");
+            }
+            else if (selected_item.first == "Magic Amulet") {
+                character_.AddPermanentAttackBonus(1);
+                character_.AddPermanentDefenseBonus(1);
+                character_.AddItem("Magic Amulet");
+            }
+            else if (selected_item.first == "Health Potion") {
+                character_.AddItem("Health Potion");
+            }
+
+            std::cout << "\nYou bought a " << selected_item.first << "!\n";
+
+            // Для постоянных улучшений
+            if (selected_item.first != "Health Potion") {
+                std::cout << "Your stats have improved permanently!\n";
+                std::cout << "Current Attack: " << character_.GetAttack() << "\n";
+                std::cout << "Current Defense: " << character_.GetDefense() << "\n";
+            }
+        } else {
+            std::cout << "\nNot enough gold!\n";
+        }
+        WaitForInput();
+    }
+}
+
+bool Character::HasItem(const std::string& item) const {
+  return std::find(purchased_upgrades_.begin(), purchased_upgrades_.end(), item) != purchased_upgrades_.end();
 }
 
 void Game::SaveGame() {

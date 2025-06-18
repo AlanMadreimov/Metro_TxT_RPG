@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <stdexcept>
+#include <algorithm>
 #include "../include/utils.h"
 
 namespace rpg {
@@ -77,7 +78,6 @@ bool Character::LoadFromFile(const std::string& file_path) {
       }
     }
   }
-
   return true;
 }
 
@@ -100,6 +100,9 @@ bool Character::SaveToFile(const std::string& file_path) const {
 
   for (const auto& item : inventory_) {
     file << "item_" << item.first << " = " << item.second << "\n";
+  }
+  for (const auto& upgrade : purchased_upgrades_) {
+    file << "upgrade = " << upgrade << "\n";
   }
 
   return true;
@@ -183,6 +186,8 @@ void Character::LoadClass(const std::string& file_path) {
           SetGold(std::stoi(value));
         }else if (key == "item_Medical bandages") {
           AddItem("Medical bandages", std::stoi(value));
+        }else if (key == "upgrade") {  // Добавляем загрузку улучшений
+          purchased_upgrades_.push_back(value);
         }
       }
     }

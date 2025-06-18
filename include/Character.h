@@ -3,6 +3,7 @@
 
 #include <string>
 #include <map>
+#include <vector>
 
 namespace rpg {
 
@@ -19,8 +20,8 @@ namespace rpg {
         int GetLevel() const { return level_; }
         int GetHealth() const { return health_; }
         int GetMaxHealth() const { return max_health_; }
-        int GetAttack() const { return attack_; }
-        int GetDefense() const { return defense_; }
+        int GetAttack() const { return attack_ + permanent_attack_bonus_; }
+        int GetDefense() const { return defense_ + permanent_defense_bonus_; }
         int GetGold() const { return gold_; }
         int GetExperience() const { return experience_; }
         const std::string& GetName() const { return name_; }
@@ -44,6 +45,11 @@ namespace rpg {
         int GetItemCount(const std::string& item) const;
         const std::map<std::string, int>& GetInventory() const { return inventory_; }
 
+        // Методы, добавляющие постоянный бонус к характеристикам
+        void AddPermanentAttackBonus(int value) { permanent_attack_bonus_ += value; }
+        void AddPermanentDefenseBonus(int value) { permanent_defense_bonus_ += value; }
+        bool HasItem(const std::string& item) const;
+
 
     private:
         std::string name_;
@@ -59,6 +65,9 @@ namespace rpg {
         std::map<std::string, int> inventory_;
         void LoadClass(const std::string&);
         void CalculateStats();
+        int permanent_attack_bonus_ = 0;
+        int permanent_defense_bonus_ = 0;
+        std::vector<std::string> purchased_upgrades_; // Для отслеживания купленных улучшений
     };
 
 }  // namespace rpg
