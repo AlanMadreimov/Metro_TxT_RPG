@@ -1,6 +1,5 @@
 #include "../include/Game.h"
 #include <iostream>
-#include <cstdlib>
 #include <ctime>
 #include <fstream>
 #include <algorithm>
@@ -21,6 +20,8 @@ const std::vector<std::string> kMainMenuOptions = {
 const std::vector<std::string> kGameMenuOptions = {
   "Explore",
   "Shop",
+  "Gym",
+  "Sleep",
   "Status",
   "Save Game",
   "Main Menu"
@@ -182,13 +183,19 @@ void Game::GameLoop() {
       case 2:  // Shop
         Shop();
         break;
-      case 3:  // Status
+      case 3: // Gym
+        Gym();
+        break;
+      case 4: // Sleep
+        Sleep();
+        break;
+      case 5:  // Status
         ShowStatus();
         break;
-      case 4:  // Save Game
+      case 6:  // Save Game
         SaveGame();
         break;
-      case 5:  // Main Menu
+      case 7:  // Main Menu
         game_running_ = false;
         break;
     }
@@ -508,8 +515,81 @@ void Game::SaveGame() {
   WaitForInput();
 }
 
-void Game::PrintMenu(const std::string& title,
-                    const std::vector<std::string>& options) const {
+void Game::Sleep() {
+  std::cout << "Pay 5 gold or get out of here\n";
+  std::vector<std::string> options = {"Pay and sleep", "Return"};
+  PrintMenu("Sleep Options", options);
+  int choice = GetChoice(1,2);
+  if (choice == 1) {
+    if (character_.GetGold() >= 5) {
+      character_.AddHealth(character_.GetMaxHealth());
+      character_.AddGold(-5);
+      std::cout << "ZZZ....";
+      WaitForInput();
+      utils::ClearScreen();
+    }
+    else {
+      std::cout << "You don't have enough money";
+      WaitForInput();
+      utils::ClearScreen();
+    }
+  }
+}
+
+void Game::Gym() {
+  std::cout << "You pay with your health for every workout (5)\n";
+  std::vector<std::string> options = {"Upgrade your attack", "Upgrade your defense","Return"};
+  PrintMenu("Gym Options", options);
+  int choice = GetChoice(1,3);
+  if (choice == 1) {
+    if (character_.GetHealth() >= 5) {
+      character_.AddHealth(-5);
+      character_.SetAttack(character_.GetAttack()+1);
+      std::cout << "Sounds of a tough workout...\n";
+      WaitForInput();
+      utils::ClearScreen();
+      if (character_.GetHealth() <= 0) {
+        std::cout << "You overtrained, your health failed, and you had to pay 5 gold\n\n";
+        if (character_.GetGold() <= 5) {
+          std::cout << "You lose, sucker!\n";
+          game_running_ = false;
+        }else {
+          character_.AddGold(-5);
+          character_.AddHealth(character_.GetMaxHealth());
+        }
+        WaitForInput();
+      }
+      utils::ClearScreen();
+    }
+    else if (character_.GetHealth() >= 5) {
+      character_.AddHealth(-5);
+      character_.SetDefense(character_.GetDefense()+1);
+      std::cout << "Sounds of a tough workout...\n";
+      WaitForInput();
+      utils::ClearScreen();
+      if (character_.GetHealth() <= 0) {
+        std::cout << "You overtrained, your health failed, and you had to pay 5 gold\n\n";
+        if (character_.GetGold() <= 5) {
+          std::cout << "You lose, sucker!\n";
+          game_running_ = false;
+        }else {
+          character_.AddGold(-5);
+          character_.AddHealth(character_.GetMaxHealth());
+        }
+        WaitForInput();
+      }
+      utils::ClearScreen();
+    }
+
+    else {
+      std::cout << "You don't have enough money";
+      WaitForInput();
+      utils::ClearScreen();
+    }
+  }
+}
+
+void Game::PrintMenu(const std::string& title, const std::vector<std::string>& options) const {
   std::cout << title << ":\n";
   for (size_t i = 0; i < options.size(); ++i) {
     std::cout << "  " << (i + 1) << ". " << options[i] << "\n";

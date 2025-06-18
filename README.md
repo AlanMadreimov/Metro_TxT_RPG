@@ -1,2 +1,3 @@
 Wellcome to our project. Open uml file and watch the ideal architecture
 In progress...
+GameDesign document [DisDock](https://docs.google.com/document/d/1BnX-0jWnLAAfDJ0QFxiuvHCqsiPB-1Cc_KiFXoRYuXI/edit?usp=sharing)
