@@ -433,24 +433,29 @@ void Game::Shop() {
     std::cout << "=== Shop ===\n\n";
     std::cout << "Gold: " << character_.GetGold() << "\n\n";
 
-    std::vector<std::pair<std::string, int>> shop_items = {
-        {"Health Potion", 20},
-        {"Weapon Scope", 100},
-        {"Armor Plating", 150},
-        {"Magic Amulet", 120}
-    };
-
+    const auto& shop_items = asset_manager_.GetShopItems();
     std::vector<std::string> options;
+
     for (const auto& item : shop_items) {
-        std::string option = item.first;
-        if (item.first == "Weapon Scope") option += " (+2 Attack)";
-        else if (item.first == "Armor Plating") option += " (+3 Defense)";
-        else if (item.first == "Magic Amulet") option += " (+1 Attack/Defense)";
+        std::string option = item.name;
 
-        option += " - " + std::to_string(item.second) + " gold";
+        // Добавляем описание бонусов
+        if (item.attack_bonus > 0 || item.defense_bonus > 0) {
+            option += " (";
+            if (item.attack_bonus > 0) {
+                option += "+" + std::to_string(item.attack_bonus) + " Attack";
+                if (item.defense_bonus > 0) option += ", ";
+            }
+            if (item.defense_bonus > 0) {
+                option += "+" + std::to_string(item.defense_bonus) + " Defense";
+            }
+            option += ")";
+        }
 
-        // Показываем "(PURCHASED)" если уже куплено
-        if (character_.HasItem(item.first)) {
+        option += " - " + std::to_string(item.price) + " gold";
+        if (item.is_permanent) option += " (PERMANENT)";
+
+        if (character_.HasItem(item.name)) {
             option += " (PURCHASED)";
         }
 
@@ -464,38 +469,27 @@ void Game::Shop() {
     if (choice <= shop_items.size()) {
         const auto& selected_item = shop_items[choice - 1];
 
-        // Проверяем, не куплен ли уже этот предмет
-        if (character_.HasItem(selected_item.first)) {
-            std::cout << "\nYou already have this upgrade!\n";
+        if (character_.HasItem(selected_item.name)) {
+            std::cout << "\nYou already have this item!\n";
             WaitForInput();
             return;
         }
 
-        if (character_.GetGold() >= selected_item.second) {
-            character_.AddGold(-selected_item.second);
+        if (character_.GetGold() >= selected_item.price) {
+            character_.AddGold(-selected_item.price);
 
-            // Применяем эффекты постоянных улучшений
-            if (selected_item.first == "Weapon Scope") {
-                character_.AddPermanentAttackBonus(2);
-                character_.AddItem("Weapon Scope");
+            // Применяем бонусы
+            if (selected_item.attack_bonus > 0) {
+                character_.AddPermanentAttackBonus(selected_item.attack_bonus);
             }
-            else if (selected_item.first == "Armor Plating") {
-                character_.AddPermanentDefenseBonus(3);
-                character_.AddItem("Armor Plating");
-            }
-            else if (selected_item.first == "Magic Amulet") {
-                character_.AddPermanentAttackBonus(1);
-                character_.AddPermanentDefenseBonus(1);
-                character_.AddItem("Magic Amulet");
-            }
-            else if (selected_item.first == "Health Potion") {
-                character_.AddItem("Health Potion");
+            if (selected_item.defense_bonus > 0) {
+                character_.AddPermanentDefenseBonus(selected_item.defense_bonus);
             }
 
-            std::cout << "\nYou bought a " << selected_item.first << "!\n";
+            character_.AddItem(selected_item.name);
 
-            // Для постоянных улучшений
-            if (selected_item.first != "Health Potion") {
+            std::cout << "\nYou bought a " << selected_item.name << "!\n";
+            if (selected_item.is_permanent) {
                 std::cout << "Your stats have improved permanently!\n";
                 std::cout << "Current Attack: " << character_.GetAttack() << "\n";
                 std::cout << "Current Defense: " << character_.GetDefense() << "\n";

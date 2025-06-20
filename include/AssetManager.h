@@ -8,6 +8,13 @@ namespace rpg {
 
     class AssetManager {
     public:
+        struct ShopItemData {
+            std::string name;
+            int price;
+            int attack_bonus;
+            int defense_bonus;
+            bool is_permanent;
+        };
         struct EnemyData {
             std::string name;
             int base_health;
@@ -21,8 +28,13 @@ namespace rpg {
         AssetManager();
         EnemyData GetRandomEnemy(int player_level) const;
         EnemyData GetBossData() const;
-
+        const std::vector<ShopItemData>& GetShopItems() const;
     private:
+        std::vector<ShopItemData> shop_items_;
+        void LoadShopItems();
+        void CreateDefaultShopItems();
+
+
         std::vector<EnemyData> enemies_;
         EnemyData boss_data_;
 
