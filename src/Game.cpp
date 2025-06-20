@@ -246,9 +246,10 @@ void Game::Explore() {
 
   // 30% chance встретить врага
   if (std::rand() % 100 < 30) {
-    std::cout << "You encountered an enemy!\n";
+    auto enemy_data = asset_manager_.GetRandomEnemy(character_.GetLevel());
+    std::cout << "You encountered a " << enemy_data.name << "!\n";
     WaitForInput();
-    Battle();
+    Battle(enemy_data);
   } else {
     // 50% chance найти что-то полезное
     if (std::rand() % 100 < 50) {
@@ -262,15 +263,14 @@ void Game::Explore() {
   }
 }
 
-void Game::Battle() {
-  // Создаем врага
-  std::string enemy_name = kEnemyNames[std::rand() % kEnemyNames.size()];
-  int enemy_level = std::max(1, character_.GetLevel() + (std::rand() % 3 - 1));
-  int enemy_health = 15 + enemy_level * 5;
-  int enemy_attack = 3 + enemy_level * 2;
-  int enemy_defense = 1 + enemy_level;
-  int experience_reward = 20 * enemy_level;
-  int gold_reward = 5 * enemy_level;
+void Game::Battle(const AssetManager::EnemyData& enemy_data) {
+  std::string enemy_name = enemy_data.name;
+  int enemy_health = enemy_data.base_health;
+  int enemy_attack = enemy_data.base_attack;
+  int enemy_defense = enemy_data.base_defense;
+  int experience_reward = enemy_data.exp_reward;
+  int gold_reward = enemy_data.gold_reward;
+  int enemy_level = enemy_data.level;
 
   std::cout << enemy_name << " (Lv " << enemy_level << ") appears!\n";
 
@@ -352,12 +352,13 @@ void Game::Battle() {
 }
 
 void Game::FinalBossBattle() {
-    std::string boss_name = "MUTATED HUMAN";
-    int boss_hp = 100;
-    int boss_attack = 15;
-    int boss_defense = 8;
-    int turn_counter = 0;
-    bool boss_enhanced = false;
+  auto boss_data = asset_manager_.GetBossData();
+  std::string boss_name = boss_data.name;
+  int boss_hp = boss_data.base_health;
+  int boss_attack = boss_data.base_attack;
+  int boss_defense = boss_data.base_defense;
+  int turn_counter = 0;
+  bool boss_enhanced = false;
 
     std::cout << "=== FINAL BATTLE ===\n";
     std::cout << boss_name << " appears!\n\n";
@@ -410,17 +411,21 @@ void Game::FinalBossBattle() {
 }
 
 void Game::ShowEnding() {
-    utils::ClearScreen();
-    std::cout << "=== WIN ===\n\n";
-    std::cout << "You won the mutated human and finish your adventure!\n\n";
+  utils::ClearScreen();
+  std::cout << "But the world is not a static picture. He breathes, he changes. Today you are a hero, tomorrow you are a legend, and the\nday after tomorrow... who knows? The end? Or a new beginning?\n\n";
+  std::cout << "Pay for a full version\n";
+  WaitForInput();
+  utils::ClearScreen();
+  std::cout << "=== WIN ===\n\n";
+  std::cout << "You won the mutated human and finish your adventure for now!\n\n";
 
-    std::cout << "Gamer statistic:\n";
-    std::cout << "Level: " << character_.GetLevel() << "\n";
-    std::cout << "Summary gold: " << character_.GetGold() << "\n";
+  std::cout << "Gamer statistic:\n";
+  std::cout << "Level: " << character_.GetLevel() << "\n";
+  std::cout << "Summary gold: " << character_.GetGold() << "\n";
 
-    std::cout << "Thanks for the game!\n";
-    WaitForInput();
-    game_running_ = false;
+  std::cout << "Thanks for the game!\n";
+  WaitForInput();
+  game_running_ = false;
 }
 
 void Game::Shop() {

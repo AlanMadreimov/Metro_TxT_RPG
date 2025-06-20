@@ -15,6 +15,8 @@ add_executable(rpg_game
         src/character.cpp
         src/game.cpp
         src/utils.cpp
+        include/AssetManager.h
+        src/AssetManager.cpp
 )
 
 target_include_directories(rpg_game PRIVATE include)
