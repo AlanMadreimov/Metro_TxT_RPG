@@ -15,7 +15,7 @@ namespace rpg {
             int base_defense;
             int exp_reward;
             int gold_reward;
-            int level;
+            int level = 1;
         };
 
         AssetManager();
@@ -24,9 +24,12 @@ namespace rpg {
 
     private:
         std::vector<EnemyData> enemies_;
+        EnemyData boss_data_;
 
         void LoadEnemyData();
+        void LoadBossData();
         void CreateDefaultEnemies();
+        void CreateDefaultBoss();
         EnemyData GetDefaultEnemy() const;
     };
 

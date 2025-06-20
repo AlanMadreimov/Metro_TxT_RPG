@@ -353,10 +353,10 @@ void Game::Battle(const AssetManager::EnemyData& enemy_data) {
 
 void Game::FinalBossBattle() {
   auto boss_data = asset_manager_.GetBossData();
-  std::string boss_name = boss_data.name;
-  int boss_hp = boss_data.base_health;
-  int boss_attack = boss_data.base_attack;
-  int boss_defense = boss_data.base_defense;
+    std::string boss_name = boss_data.name;
+    int boss_hp = boss_data.base_health;
+    int boss_attack = boss_data.base_attack;
+    int boss_defense = boss_data.base_defense;
   int turn_counter = 0;
   bool boss_enhanced = false;
 
