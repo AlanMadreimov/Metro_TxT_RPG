@@ -1,7 +1,6 @@
 #ifndef RPG_GAME_GAME_H_
 #define RPG_GAME_GAME_H_
 
-#include <map>
 #include <string>
 #include <vector>
 

@@ -140,9 +140,12 @@ AssetManager::EnemyData AssetManager::GetRandomEnemy(int player_level) const {
   int level_variation = player_level + (gen() % 3 - 1);
   level_variation = std::max(1, level_variation);
 
-  enemy.base_health = std::max(5, enemy.base_health * level_variation / 2);
-  enemy.base_attack = std::max(2, enemy.base_attack * level_variation / 2);
-  enemy.base_defense = std::max(1, enemy.base_defense * level_variation / 2);
+  enemy.base_health =
+      std::max(enemy.base_health, enemy.base_health * level_variation / 2);
+  enemy.base_attack =
+      std::max(enemy.base_attack, enemy.base_attack * level_variation / 2);
+  enemy.base_defense =
+      std::max(enemy.base_defense, enemy.base_defense * level_variation / 2);
   enemy.exp_reward *= level_variation;
   enemy.gold_reward *= level_variation;
   enemy.level = level_variation;
