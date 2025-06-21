@@ -1,0 +1,14 @@
+{
+  "gold_for_sleep": 5,
+  "hp_to_gym": 5,
+  "gold_for_revieve": 5,
+  "gym_attack_updt": 1,
+  "gym_defense_updt": 1,
+  "chanche_to_enemy": 30,
+  "chance_to_spawn_gold": 50,
+  "chance_gold_amount": 20,
+  "level_to_finish_game": 5,
+  "how_many_hp_heal": 20,
+  "chance_to_run": 50,
+  "how_often_boss_rage": 3
+}

@@ -1,0 +1,8 @@
+{
+  "main_menu": ["New Game", "Load Game", "Exit"],
+  "game_menu": ["Explore", "Shop", "Gym", "Sleep", "Status", "Save Game", "Main Menu"],
+  "character_classes": ["Warrior", "Huckster", "Mechanic", "Medic"],
+  "sleep_options": ["Pay and sleep", "Return"],
+  "gym_options": ["Upgrade your attack", "Upgrade your defense", "Return"],
+  "battle": ["Attack", "Use Medical bandages", "Run Away"]
+}

@@ -4,12 +4,12 @@
 #include <string>
 
 namespace rpg {
-    namespace utils {
+namespace utils {
 
-        void ClearScreen();
-        void Trim(std::string& str);
+void ClearScreen();
+void Trim(std::string& str);
 
-    }  // namespace utils
+}  // namespace utils
 }  // namespace rpg
 
 #endif  // RPG_GAME_UTILS_H_

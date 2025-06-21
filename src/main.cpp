@@ -1,7 +1,7 @@
 #include "../include/Game.h"
 
 int main() {
-    rpg::Game game;
-    game.Start();
-    return 0;
+  rpg::Game game;
+  game.Start();
+  return 0;
 }

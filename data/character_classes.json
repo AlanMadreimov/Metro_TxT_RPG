@@ -1,0 +1,38 @@
+{
+  "Warrior": {
+    "base_attack": 8,
+    "base_defense": 5,
+    "base_health": 20,
+    "starting_gold": 50,
+    "starting_items": {
+      "Medical bandages": 1
+    }
+  },
+  "Huckster": {
+    "base_attack": 5,
+    "base_defense": 3,
+    "base_health": 15,
+    "starting_gold": 100,
+    "starting_items": {
+      "Medical bandages": 2
+    }
+  },
+  "Mechanic": {
+    "base_attack": 4,
+    "base_defense": 6,
+    "base_health": 25,
+    "starting_gold": 75,
+    "starting_items": {
+      "Medical bandages": 0
+    }
+  },
+  "Medic": {
+    "base_attack": 3,
+    "base_defense": 4,
+    "base_health": 15,
+    "starting_gold": 60,
+    "starting_items": {
+      "Medical bandages": 3
+    }
+  }
+}

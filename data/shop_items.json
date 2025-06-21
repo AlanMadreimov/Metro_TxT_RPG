@@ -1,0 +1,6 @@
+{
+  "Medical bandages":[15,0,0,false],
+  "Weapon Scope": [20,2,0,true],
+  "Armor Plating": [30,0,3,true],
+  "Armor With Spikes":[25,1,1,true]
+}

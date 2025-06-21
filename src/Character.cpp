@@ -1,9 +1,13 @@
 #include "../include/Character.h"
+
+#include <algorithm>
 #include <fstream>
+#include <nlohmann/json.hpp>
 #include <sstream>
 #include <stdexcept>
-#include <algorithm>
+
 #include "../include/utils.h"
+using json = nlohmann::json;
 
 namespace rpg {
 
@@ -34,77 +38,68 @@ Character::Character(const std::string& file_path) : Character() {
   LoadFromFile(file_path);
 }
 
-bool Character::LoadFromFile(const std::string& file_path) {
-  std::ifstream file(file_path);
-  if (!file.is_open()) {
+bool Character::LoadFromFile(const std::string& filename) {
+  std::ifstream file(filename);
+  if (!file.is_open()) return false;
+
+  json data;
+  try {
+    file >> data;
+
+    name_ = data["name"];
+    class_ = data["class"];
+    level_ = data["level"];
+    health_ = data["health"];
+    max_health_ = data["max_health"];
+    attack_ = data["attack"];
+    defense_ = data["defense"];
+    gold_ = data["gold"];
+    experience_ = data["experience"];
+    permanent_attack_bonus_ = data["permanent_attack_bonus"];
+    permanent_defense_bonus_ = data["permanent_defense_bonus"];
+
+    inventory_.clear();
+    for (auto& [key, value] : data["inventory"].items()) {
+      inventory_[key] = value;
+    }
+
+    purchased_upgrades_.clear();
+    for (auto& item : data["purchased_upgrades"]) {
+      purchased_upgrades_.push_back(item);
+    }
+
+    return true;
+  } catch (...) {
     return false;
   }
-
-  std::string line;
-  while (std::getline(file, line)) {
-    std::istringstream iss(line);
-    std::string key;
-    if (std::getline(iss, key, '=')) {
-      std::string value;
-      if (std::getline(iss, value)) {
-        utils::Trim(key);
-        utils::Trim(value);
-
-        if (key == "name") {
-          name_ = value;
-        } else if (key == "class") {
-          class_ = value;
-        } else if (key == "level") {
-          level_ = std::stoi(value);
-        } else if (key == "health") {
-          health_ = std::stoi(value);
-        } else if (key == "max_health") {
-          max_health_ = std::stoi(value);
-        } else if (key == "attack") {
-          attack_ = std::stoi(value);
-        } else if (key == "defense") {
-          defense_ = std::stoi(value);
-        } else if (key == "gold") {
-          gold_ = std::stoi(value);
-        } else if (key == "experience") {
-          experience_ = std::stoi(value);
-        } else if (key == "experience_to_next_level") {
-          experience_to_next_level_ = std::stoi(value);
-        } else if (key.find("item_") == 0) {
-          std::string item_name = key.substr(5);
-          int quantity = std::stoi(value);
-          inventory_[item_name] = quantity;
-        }
-      }
-    }
-  }
-  return true;
 }
 
-bool Character::SaveToFile(const std::string& file_path) const {
-  std::ofstream file(file_path);
-  if (!file.is_open()) {
-    return false;
-  }
+bool Character::SaveToFile(const std::string& filename) const {
+  json data;
 
-  file << "name = " << name_ << "\n";
-  file << "class = " << class_ << "\n";
-  file << "level = " << level_ << "\n";
-  file << "health = " << health_ << "\n";
-  file << "max_health = " << max_health_ << "\n";
-  file << "attack = " << attack_ << "\n";
-  file << "defense = " << defense_ << "\n";
-  file << "gold = " << gold_ << "\n";
-  file << "experience = " << experience_ << "\n";
-  file << "experience_to_next_level = " << experience_to_next_level_ << "\n";
+  data["name"] = name_;
+  data["class"] = class_;
+  data["level"] = level_;
+  data["health"] = health_;
+  data["max_health"] = max_health_;
+  data["attack"] = attack_;
+  data["defense"] = defense_;
+  data["gold"] = gold_;
+  data["experience"] = experience_;
+  data["permanent_attack_bonus"] = permanent_attack_bonus_;
+  data["permanent_defense_bonus"] = permanent_defense_bonus_;
 
+  data["inventory"] = json::object();
   for (const auto& item : inventory_) {
-    file << "item_" << item.first << " = " << item.second << "\n";
-  }
-  for (const auto& upgrade : purchased_upgrades_) {
-    file << "upgrade = " << upgrade << "\n";
+    data["inventory"][item.first] = item.second;
   }
 
+  data["purchased_upgrades"] = purchased_upgrades_;
+
+  std::ofstream file(filename);
+  if (!file.is_open()) return false;
+
+  file << data.dump(2);
   return true;
 }
 
@@ -139,7 +134,6 @@ void Character::CalculateStats() {
 }
 
 void Character::AddItem(const std::string& item, int quantity) {
-  if (quantity <= 0) return;
   inventory_[item] += quantity;
 }
 
@@ -160,53 +154,8 @@ int Character::GetItemCount(const std::string& item) const {
   return it != inventory_.end() ? it->second : 0;
 }
 
-void Character::LoadClass(const std::string& file_path) {
-  std::ifstream file(file_path);
-  if (!file.is_open()) {
-    abort();
-  }
-  std::string line;
-  while (std::getline(file, line)) {
-    std::istringstream iss(line);
-    std::string key;
-    if (std::getline(iss, key, '=')) {
-      std::string value;
-      if (std::getline(iss, value)) {
-        utils::Trim(key);
-        utils::Trim(value);
-
-        if (key == "max_health") {
-          SetMaxHp(std::stoi(value));
-          AddHealth(max_health_-health_);
-        } else if (key == "attack") {
-          SetAttack(std::stoi(value));
-        }else if (key == "defense"){
-          SetDefense(std::stoi(value));
-        }else if (key == "gold"){
-          SetGold(std::stoi(value));
-        }else if (key == "item_Medical bandages") {
-          AddItem("Medical bandages", std::stoi(value));
-        }else if (key == "upgrade") {  // Добавляем загрузку улучшений
-          purchased_upgrades_.push_back(value);
-        }
-      }
-    }
-  }
-}
-
-void Character::SetClass(const std::string &character_class) {
+void Character::SetClass(const std::string& character_class) {
   class_ = character_class;
-  if (character_class == "Warrior") {
-    LoadClass("../data/warrior_data.txt");
-  }else if (character_class == "Medic") {
-    LoadClass("../data/medic_data.txt");
-  }else if (character_class == "Mechanic") {
-    LoadClass("../data/mechanic_data.txt");
-  }else if (character_class == "Huckster") {
-    LoadClass("../data/huckster_data.txt");
-  }
-
-
 }
 
 }  // namespace rpg

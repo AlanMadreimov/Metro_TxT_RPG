@@ -1,0 +1,17 @@
+{
+  "name": "Player",
+  "class": "Warrior",
+  "level": 5,
+  "health": 50,
+  "max_health": 50,
+  "attack": 12,
+  "defense": 8,
+  "gold": 100,
+  "experience": 75,
+  "inventory": {
+    "Medical bandages": 0
+  },
+  "purchased_upgrades": [
+    "Weapon Scope"
+  ]
+}
